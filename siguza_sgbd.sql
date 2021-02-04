@@ -13,3 +13,8 @@ insert into admins values
 (DEFAULT, 'Matheus', 'matheustellestab8@gmail.com', 'df444%8*');
 
 select * from admins;
+
+desc admins;
+
+ALTER TABLE admins
+add column usuario varchar(20);
