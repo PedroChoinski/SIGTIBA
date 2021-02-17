@@ -41,24 +41,19 @@
 
     <div class="container">
 
-
-        <div class="slidecontainer">
+        <div class="slidecontainer centralizar">
             <input type="range" min="1880" max="2010" value="1880" step="10" class="slider" id="myRange"
                 onchange="read()">
-
-            <body>
-                <h1>
-                    <p><span id="year" onchange="resetSlider()">1880</span></p>
-                </h1>
-                <h2>
-                    <p><span id="textYear">
-                            Inicia-se o transporte público urbano com bondes puxados a mula e começa a trafegar a
-                            primeira linha férrea da estação ferroviária até o Batel. Na década de 1890, são 20 carros
-                            operando em 18 km e, em 1903, prolonga-se até o Seminário.
-                        </span></p>
-                </h2>
         </div>
 
+         
+            <div class="centralizar"><h2><span id="year" onchange="resetSlider()">1880</span></h2></div>
+                <p><span id="textYear">
+                  Inicia-se o transporte público urbano com bondes puxados a mula e começa a trafegar a
+                  primeira linha férrea da estação ferroviária até o Batel. Na década de 1890, são 20 carros
+                  operando em 18 km e, em 1903, prolonga-se até o Seminário.
+                </span></p>
+        
     </div>
 
     <script>
