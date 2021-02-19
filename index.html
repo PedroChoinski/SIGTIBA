@@ -496,7 +496,6 @@
             style: style_LimitesdosBairros_6_0,
         });
         bounds_group.addLayer(layer_LimitesdosBairros_6);
-        map.addLayer(layer_LimitesdosBairros_6);
         function pop_reasdeOcupaoIrregular_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -961,6 +960,7 @@
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
+            map.addLayer(layer_RtulosdoGoogle_15);
         }
 
         function style_Registros_16_0(feature) {
