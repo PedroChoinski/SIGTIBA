@@ -9,14 +9,14 @@
 <br>
 
 <p align="center">
- <a href="#-objetivo">Objetivo</a> •
+ <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-tecnologias">Tecnologias</a> • 
  <a href="#-configurando-o-ambiente-de-desenvolvimento">Configurando Ambiente de Desenvolvimento</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
  <a href="#-autores-">Autores</a>
 </p>
 
-## 🎯 Objetivo
+## 🎯 Descrição e Objetivo
 O aplicativo visa a disponibilidade de um ambiente de escrita customizável, com a possibilidade de introduzir mídia e compartilhar diários com outras pessoas, tanto para visualização quanto para escrita em conjunto. Diante disso, pode-se usufruir os benefícios da autorreflexão, do pensamento e da prática de escrita a partir do dispositivo mais essencial do mundo contemporâneo, assim, possibilitando uma melhora na qualidade de vida.
 
 ## 💻 Tecnologias
