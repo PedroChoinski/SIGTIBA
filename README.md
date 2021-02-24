@@ -13,7 +13,7 @@
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-configurando-o-ambiente-de-desenvolvimento">Configurando Ambiente de Desenvolvimento</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
- <a href="#-autores-">Autores</a>
+ <a href="#-desenvolvedores-">Desenvolvedores</a>
 </p>
 
 ## 📋 Descrição e Objetivo
@@ -123,7 +123,7 @@ npx react-native start
 npx react-native run-android
 ```
 
-## 👨‍💻 Autores 👩‍💻
+## 👨🏼‍🎓 Desenvolvedores 👨🏼‍🎓
 <p align="center">
  <a href="https://github.com/andrefumaneri">André Fumaneri</a> •
  <a href="https://github.com/TilTelles">Matheus Telles</a> •
