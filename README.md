@@ -9,15 +9,16 @@
 <br>
 
 <p align="center">
- <a href="#-descrição-e-objetivos">Descrição e Objetivo</a> •
+ <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-configurando-o-ambiente-de-desenvolvimento">Configurando Ambiente de Desenvolvimento</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
  <a href="#-autores-">Autores</a>
 </p>
 
-## 📋 Descrição e Objetivos
+## 📋 Descrição e Objetivo
 
+  A plataforma SIGTIBA reúne informações geográficas da cidade de Curitiba espacializadas em um webmapa, trazendo resumos didáticos sobre o processo de urbanização da cidade, zoneamento vigente, legislação ambiental e planejamento urbano. O objetivo do projeto é que através da integração entre a leitura dos textos e a espacialização no mapa, o usuário equipe-se de um conhecimento maior sobre tais temáticas urbanas, as quais são fundamentais no processo de formação de um cidadão.
 
 ## 🛠 Ferramentas Utilizadas
 ````QGIS 3.14````
