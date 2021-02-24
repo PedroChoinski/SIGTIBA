@@ -123,7 +123,7 @@ npx react-native start
 npx react-native run-android
 ```
 
-## 👨🏼‍🎓 Desenvolvedores 👨🏼‍🎓
+## 👨🏼‍🎓 Desenvolvedores 
 <p align="center">
  <a href="https://github.com/andrefumaneri">André Fumaneri</a> •
  <a href="https://github.com/TilTelles">Matheus Telles</a> •
