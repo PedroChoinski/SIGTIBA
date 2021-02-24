@@ -125,8 +125,8 @@ npx react-native run-android
 
 ## 👨‍💻 Autores 👩‍💻
 <p align="center">
- <a href="https://github.com/analiviaexe">Ana Lívia</a> •
- <a href="https://github.com/borelbruno">Bruno Borel</a> •
- <a href="https://github.com/davidlpgomes">David Gomes</a> 
+ <a href="https://github.com/andrefumaneri">André Fumaneri</a> •
+ <a href="https://github.com/TilTelles">Matheus Telles</a> •
+ <a href="https://github.com/pedrochoinski">Pedro Choinski</a> 
 </p>
 
