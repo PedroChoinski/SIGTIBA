@@ -26,6 +26,7 @@ a:hover {
 
 p{
   font-size: 24px;
+  text-align: justify;
 }
 
 .slidecontainer {
@@ -129,4 +130,39 @@ p{
   
 .verdinho{
   color: rgba(46,139,87, 0.95);
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 370px;
+}
+
+div.gallery:hover {
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding:15px;
+  text-align: center;
+}
+
+div.author {
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+  font-size: 14px;
+}
+
+div.title {
+  padding: 7px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 3px solid rgba(55, 151, 97, 0.95);
+  color: #404040;
 }
