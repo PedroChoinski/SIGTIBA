@@ -111,7 +111,7 @@ p{
     text-align: left;
   }
 
-  input[type=text], [type=password] {
+  input[type=text], [type=password] [type=radio]{
     border: 2px solid lightgrey;
   }
 
@@ -165,4 +165,9 @@ div.title {
   font-weight: bold;
   border-bottom: 3px solid rgba(55, 151, 97, 0.95);
   color: #404040;
+}
+
+label.radio {
+  margin-right: 30px;
+  font-size: 15px;
 }
