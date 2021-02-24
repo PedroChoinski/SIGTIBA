@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://i.ibb.co/vQg47Z5/Mnemosyne2.png"/>
+  <img src="https://i.ibb.co/vLqdDZb/logo-sigtiba.jpg" alt="logo-sigtiba" border="0">
 </p>
 
 <h3 align="center">
