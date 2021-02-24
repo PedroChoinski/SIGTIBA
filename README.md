@@ -3,23 +3,23 @@
 </p>
 
 <h3 align="center">
-  SIGTIBA: Sistema de Informações Geográficas de Curitiba
+  🗺 SIGTIBA: Sistema de Informações Geográficas de Curitiba
 </h3>
 
 <br>
 
 <p align="center">
- <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
+ <a href="#-descrição-e-objetivos">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-configurando-o-ambiente-de-desenvolvimento">Configurando Ambiente de Desenvolvimento</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
  <a href="#-autores-">Autores</a>
 </p>
 
-## 🎯 Descrição e Objetivo
+## 📋 Descrição e Objetivos
 
 
-## 💻 Ferramentas Utilizadas
+## 🛠 Ferramentas Utilizadas
 ````QGIS 3.14````
 ````qgis2web plugin 3.16.0````
 ````Leaflet 1.7.1````
