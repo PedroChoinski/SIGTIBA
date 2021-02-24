@@ -22,7 +22,7 @@
         <div class="navbar navbar-collapse">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">ínicio</a>
+                    <a class="nav-link" href="index.html">webmapa</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="legislacao.html">legislação</a>
@@ -31,7 +31,7 @@
                     <a class="nav-link" href="urbanizacao.html">urbanização</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">login</a>
+                    <a class="nav-link" href="login.html">admin</a>
                 </li>
             </ul>
         </div>
@@ -41,24 +41,74 @@
 
     <div class="container">
 
-
-        <div class="slidecontainer">
+        <div class="slidecontainer centralizar">
             <input type="range" min="1880" max="2010" value="1880" step="10" class="slider" id="myRange"
                 onchange="read()">
-
-            <body>
-                <h1>
-                    <p><span id="year" onchange="resetSlider()">1880</span></p>
-                </h1>
-                <h2>
-                    <p><span id="textYear">
-                            Inicia-se o transporte público urbano com bondes puxados a mula e começa a trafegar a
-                            primeira linha férrea da estação ferroviária até o Batel. Na década de 1890, são 20 carros
-                            operando em 18 km e, em 1903, prolonga-se até o Seminário.
-                        </span></p>
-                </h2>
         </div>
 
+         
+            <div class="centralizar"><h2><span id="year" onchange="resetSlider()">1880</span></h2></div>
+                <p><span id="textYear">
+                  Inicia-se o transporte público urbano com bondes puxados a mula e começa a trafegar a
+                  primeira linha férrea da estação ferroviária até o Batel. Na década de 1890, são 20 carros
+                  operando em 18 km e, em 1903, prolonga-se até o Seminário.
+                </span></p>
+        
+    </div>
+
+    <div class="pd10"> 
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/1930_ufpr.jpg" alt="foto 1">
+            </a>
+            <div class="title">Titulo registro</div>
+            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
+            <div class="author">Autor tal ano tal</div>
+        </div>
+        
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/1920_ufpr.jpg" alt="foto 2">
+            </a>
+            <div class="title">Titulo registro</div>
+            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
+            <div class="author">Autor tal ano tal</div>
+        </div>
+        
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/1930_sla.jpg" alt="foto 3">
+            </a>
+            <div class="title">Titulo registro</div>
+            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
+            <div class="author">Autor tal ano tal</div>
+        </div>
+        
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/1910_tiradentes.jpg" alt="foto 4">
+            </a>
+            <div class="title">Titulo registro</div>
+            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
+            <div class="author">Autor tal ano tal</div>
+        </div>
+
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/ferroviaria_1900.jpg" alt="foto 5">
+            </a>
+            <div class="title">Titulo registro</div>
+            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
+            <div class="author">Autor tal ano tal</div>
+        </div>
+
+        <div class="gallery">
+            <a target="" href="">
+            <img src="photos/icon_camera.png" alt="icone adicao">
+            </a>
+            <div class="title">Adicionar novo registro</div>
+            <div class="desc">Clique para adicionar um novo registro.</div>
+        </div>
     </div>
 
     <script>
