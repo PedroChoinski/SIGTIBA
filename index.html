@@ -41,7 +41,7 @@
                 <div class="navbar navbar-collapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html">ínicio</a>
+                            <a class="nav-link" href="index.html">webmapa</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="legislacao.html">legislação</a>
@@ -51,6 +51,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="login.html">login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adicao_registro.html">add registro</a>
                         </li>
                     </ul>
                 </div>
@@ -191,12 +194,12 @@
             return {
                 pane: 'pane_BaciasHidrogrficas_4',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: '#007dd3',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
+                weight: 3.0, 
+                fill: false,
                 fillOpacity: 1,
                 fillColor: 'rgba(92,125,183,1.0)',
                 interactive: true,
@@ -338,7 +341,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(255,255,191,1.0)',
+                fillColor: '#66cc66',
                 interactive: true,
             }
                     break;
@@ -368,7 +371,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(199,233,173,1.0)',
+                fillColor: '#66cc66',
                 interactive: true,
             }
                     break;
@@ -383,7 +386,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171,221,164,1.0)',
+                fillColor: '#66cc66',
                 interactive: true,
             }
                     break;
@@ -1057,7 +1060,7 @@
                 return this._div;
             };
             title.update = function () {
-                this._div.innerHTML = 'andre isso aqui vai ser usado pra alguma coisa ou é pra tira?';
+                this._div.innerHTML = 'Alguem apaga esse trem pfv';
             };
             title.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({

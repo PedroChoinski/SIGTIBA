@@ -38,29 +38,32 @@
     </nav>
     <br>
 
-    <h2 class="under pd5px">Requisições usuários</h2><br>
-
     <div class="box2">
-        <div class="gallery">
-            <div class="title">Titulo registro</div>
-            <a target="" href="">
-            <img src="photos/1920_ufpr.jpg" alt="foto 1">
-            </a>
-            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-            <div class="author">Autor tal ano tal</div>
-            <div class="type">Tipo registro</div>
-        </div>
+        <h1 class="under pd5px">Adição registro</h1><br>
+        <form class="mg15">
+            <label for="fname">Tipo</label><br>
+            <input type="radio" id="reg_hist" name="registro" value="historico">
+            <label for="historico" class="radio">Registro histórico</label>
+            <input type="radio" id="reg_soc" name="registro" value="social">
+            <label for="social" class="radio">Registro Social</label>
+            <input type="radio" id="reg_irr" name="registro" value="irregularidade">
+            <label for="irregularidade" class="radio">Registro de irregularidade</label><br><br>
 
-        <div class="gallery">
-            <div class="title">Titulo registro</div>
-            <a target="" href="">
-            <img src="photos/1920_ufpr.jpg" alt="foto 1">
-            </a>
-            <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-            <div class="author">Autor tal ano tal</div>
-            <div class="type">Tipo registro</div>
-        </div>
+            <label for="fname">Endereço</label><br>
+            <input type="text" id="adress" name="adress" size="80%"><br><br>
 
+            <label for="lname">Descrição</label><br>
+            <input type="text" id="description" name="description" size="80%" class="altura_desc"><br><br>
+
+            <label for="lname">Autor</label><br>
+            <input type="text" id="author" name="author" size="80%"><br><br>
+
+            <label for="fname">Data</label><br>
+            <input type="date" id="date" name="date" size="80%"><br><br><br>
+
+            <div class="centralizar"><input type="submit" value="Enviar"></div><br>
+        </form>
+        <br>
     </div>
 
     
