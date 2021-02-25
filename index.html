@@ -1053,16 +1053,6 @@
         cluster_Registros_16.addLayer(layer_Registros_16);
 
         bounds_group.addLayer(layer_Registros_16);
-            var title = new L.Control();
-            title.onAdd = function (map) {
-                this._div = L.DomUtil.create('div', 'info');
-                this.update();
-                return this._div;
-            };
-            title.update = function () {
-                this._div.innerHTML = 'Alguem apaga esse trem pfv';
-            };
-            title.addTo(map);
         var osmGeocoder = new L.Control.Geocoder({
             collapsed: true,
             position: 'topleft',
