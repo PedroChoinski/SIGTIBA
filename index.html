@@ -1,55 +1,65 @@
 <!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
         <link rel="stylesheet" href="css/leaflet.css"><link rel="stylesheet" href="css/L.Control.Locate.min.css">
         <link rel="stylesheet" href="css/qgis2web.css"><link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/MarkerCluster.css">
-    <link rel="stylesheet" href="css/MarkerCluster.Default.css">
-    <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
-    <link rel="stylesheet" href="css/leaflet-measure.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="css/MarkerCluster.css">
+        <link rel="stylesheet" href="css/MarkerCluster.Default.css">
+        <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
+        <link rel="stylesheet" href="css/leaflet-measure.css">
+        <link rel="stylesheet" href="css/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+         <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <style>
-        html, body, #map {
-            width: 100%;
-            height: 100%;
-            padding: 0;
-            margin: 0;
-        }
-    </style>
-    <title>SIGTIBA</title>
-</head>
-<body>
+        <style>
+            html, body, #map {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        
+        <title>SIGTIBA</title>
 
-    <nav class="navbar navbar-expand-lg pd10">
-        <a class="navbar-brand" href="index.html">SIGTIBA</a>
+        </head>
+        <body>
 
-        <div class="navbar navbar-collapse">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">ínicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="legislacao.html">legislação</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="urbanizacao.html">urbanização</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="login.html">login</a>
-                </li>
-            </ul>
+            <nav class="navbar navbar-expand-lg pd10">
+                <a class="navbar-brand" href="index.html">SIGTIBA</a>
+        
+                <div class="navbar navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">webmapa</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="legislacao.html">legislação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="urbanizacao.html">urbanização</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">admin</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="adicao_registro.html">add registro</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+    
+        <div id="map">
+
         </div>
     </nav>
 
@@ -148,10 +158,10 @@
                     color: '#ffff00',
                 });
             } else {
-                highlightLayer.setStyle({
-                    fillColor: '#ffff00',
-                    fillOpacity: 1
-                });
+              highlightLayer.setStyle({
+                fillColor: '#ffff00',
+                fillOpacity: 0.5
+              });
             }
         }
         var map = L.map('map', {
@@ -246,12 +256,12 @@
             return {
                 pane: 'pane_BaciasHidrogrficas_4',
                 opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
+                color: '#007dd3',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0,
-                fill: true,
+                weight: 3.0, 
+                fill: false,
                 fillOpacity: 1,
                 fillColor: 'rgba(92,125,183,1.0)',
                 interactive: true,
@@ -294,33 +304,33 @@
             switch(String(feature.properties['NM_GRUPO'])) {
                 case 'ZONA CENTRAL':
                     return {
-                        pane: 'pane_reasdoZoneamento_5',
-                        opacity: 1,
-                        color: 'rgba(35,35,35,1.0)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 1.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(215,25,28,1.0)',
-                        interactive: true,
-                    }
+                pane: 'pane_reasdoZoneamento_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(171, 183, 183, 1)',
+                interactive: true,
+            }
                     break;
                 case 'SETORES ESPECIAIS':
                     return {
-                        pane: 'pane_reasdoZoneamento_5',
-                        opacity: 1,
-                        color: 'rgba(35,35,35,1.0)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 1.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(228,74,51,1.0)',
-                        interactive: true,
-                    }
+                pane: 'pane_reasdoZoneamento_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: 'rgba(103, 128, 159, 1)',
+                interactive: true,
+            }
                     break;
                 case 'EIXO ESTRUTURANTES':
                     return {
@@ -384,18 +394,18 @@
                     break;
                 case 'UNIDADE DE CONSERVAÇÃO':
                     return {
-                        pane: 'pane_reasdoZoneamento_5',
-                        opacity: 1,
-                        color: 'rgba(35,35,35,1.0)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 1.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(255,255,191,1.0)',
-                        interactive: true,
-                    }
+                pane: 'pane_reasdoZoneamento_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: '#66cc66',
+                interactive: true,
+            }
                     break;
                 case 'ZONAS COM DESTINAÇÃO ESPECÍFICA':
                     return {
@@ -414,33 +424,33 @@
                     break;
                 case 'ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU':
                     return {
-                        pane: 'pane_reasdoZoneamento_5',
-                        opacity: 1,
-                        color: 'rgba(35,35,35,1.0)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 1.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(199,233,173,1.0)',
-                        interactive: true,
-                    }
+                pane: 'pane_reasdoZoneamento_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: '#66cc66',
+                interactive: true,
+            }
                     break;
                 case 'ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA':
                     return {
-                        pane: 'pane_reasdoZoneamento_5',
-                        opacity: 1,
-                        color: 'rgba(35,35,35,1.0)',
-                        dashArray: '',
-                        lineCap: 'butt',
-                        lineJoin: 'miter',
-                        weight: 1.0,
-                        fill: true,
-                        fillOpacity: 1,
-                        fillColor: 'rgba(171,221,164,1.0)',
-                        interactive: true,
-                    }
+                pane: 'pane_reasdoZoneamento_5',
+                opacity: 1,
+                color: 'rgba(35,35,35,1.0)',
+                dashArray: '',
+                lineCap: 'butt',
+                lineJoin: 'miter',
+                weight: 1.0, 
+                fill: true,
+                fillOpacity: 1,
+                fillColor: '#66cc66',
+                interactive: true,
+            }
                     break;
                 case 'ZONAS DE USO MISTO':
                     return {
@@ -551,7 +561,6 @@
             style: style_LimitesdosBairros_6_0,
         });
         bounds_group.addLayer(layer_LimitesdosBairros_6);
-        map.addLayer(layer_LimitesdosBairros_6);
         function pop_reasdeOcupaoIrregular_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -1016,6 +1025,7 @@
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
+            map.addLayer(layer_RtulosdoGoogle_15);
         }
 
         function style_Registros_16_0(feature) {
@@ -1128,6 +1138,8 @@
         map.on("layerremove", function(){
             resetLabels([layer_reasdoZoneamento_5]);
         });
-    </script>
-</body>
+        </script>
+
+    </body>
+
 </html>
