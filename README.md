@@ -11,7 +11,7 @@
 <p align="center">
  <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
- <a href="#-configurando-o-ambiente-de-desenvolvimento">Configurando Ambiente de Desenvolvimento</a> • 
+ <a href="#-preparar-o-ambiente-para-desenvolver">Preparar o Ambiente Para Desenvolver</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
  <a href="#-desenvolvedores-">Desenvolvedores</a>
 </p>
@@ -28,9 +28,9 @@
 ````Windows 10````
 ````Node JS````
 
-## ⚙ Configurando o ambiente de desenvolvimento
+## ⚙ Preparar o Ambiente Para Desenvolver
 
-Siga estas instruções se precisar construir código nativo em seu projeto. Para uma documentação mais atualizada, acesse a [documentação oficial](https://reactnative.dev/docs/environment-setup).
+Caso esteja interessado em verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
 
 ### NPM
 > Primeiro de tudo, faça o download e a instalação da versão LTS do NodeJS [aqui](https://nodejs.org/en/download/), de acordo com sua máquina.
