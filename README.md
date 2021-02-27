@@ -32,14 +32,14 @@
 
 Caso esteja interessado em executar o projeto com o maior aproveitamento possível, verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
 
-### NPM
-> Primeiro de tudo, faça o download e a instalação da versão LTS do NodeJS [aqui](https://nodejs.org/en/download/), de acordo com sua máquina.
+### Visual Studio Code
+> Como editor de código-fonte, foi utilizado o VSCode, uma poderosa ferramenta com inúmeras funções as quais auxiliam desenvolvedores. Para fazer o download do mesmo acesse [VSCode Download](https://code.visualstudio.com/Download), selecione seu sistema operacional e prossiga a instalação da maneira que já vem previamente recomendada. 
 
-### JDK
-> O React Native também requer o Java SE Development Kit (JDK). Se você já tem um JDK em seu sistema, certifique-se de que é a versão 8 ou mais recente. Se não, acesse [openjdk](https://openjdk.java.net/projects/jdk8/) e faça sua instalação.
+### QGIS
+> Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [
 
-### Yarn
-> O Yarn é um gerenciador de pacotes. Seu uso facilita o controle e gerenciamento do seu código. Para instalá-lo, siga as instruções no [site oficial](https://classic.yarnpkg.com/en/docs/install#windows-stable).
+### QGIS2WEB
+> Dentro do QGIS, foi utilizado um plug-in o qual auxilia na transformação do mapa (.qgs) em um código-fonte legível por navegadores web. Caso deseje testar tal funcionalidade ou incrementar funcionalidades no projeto, acesse a aba 
 
 ### Android Studio
 
