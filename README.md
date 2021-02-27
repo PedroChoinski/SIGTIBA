@@ -28,7 +28,7 @@
 ````Windows 10````
 ````Node JS````
 
-## ⚙ Preparar o Ambiente Para Desenvolver
+## 💻 Preparar o Ambiente Para Desenvolver
 
 Caso esteja interessado em verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
 
