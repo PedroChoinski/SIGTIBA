@@ -11,9 +11,9 @@
 <p align="center">
  <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
- <a href="#-preparar-o-ambiente-para-desenvolver">Preparar o Ambiente Para Desenvolver</a> • 
+ <a href="#-instalações-e-configurações-necessárias">Instalações e Configurações Necessárias</a> • 
   <a href="#-executando-aplicação">Executando aplicação</a> • 
- <a href="#-desenvolvedores-">Desenvolvedores</a>
+ <a href="#-desenvolvedores">Desenvolvedores</a>
 </p>
 
 ## 📋 Descrição e Objetivo
@@ -28,9 +28,9 @@
 ````Windows 10````
 ````Node JS````
 
-## 💻 Preparar o Ambiente Para Desenvolver
+## 💻 Instalações e Configurações Necessárias
 
-Caso esteja interessado em verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
+Caso esteja interessado em executar o projeto com o maior aproveitamento possível, verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
 
 ### NPM
 > Primeiro de tudo, faça o download e a instalação da versão LTS do NodeJS [aqui](https://nodejs.org/en/download/), de acordo com sua máquina.
