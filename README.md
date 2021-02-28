@@ -34,8 +34,17 @@
 
 Caso esteja interessado em executar o projeto com o maior aproveitamento possível, verificar o código-fonte ou até mesmo otimizá-lo, aqui vai um tutorial do que é necessário ser feito para preparar o ambiente de desenvolvimento. 
 
+### Navegador WEB
+> Para a interpretação do HTML, CSS e JS em conjunto é necessário um navegador o qual exibirá nosso projeto. Nesse sentido, faça o download da aplicação de sua escolha, recomendamos o uso do [Google Chrome](https://www.google.com/chrome/).
+
 ### Visual Studio Code
 > Como editor de código-fonte, foi utilizado o VSCode, uma poderosa ferramenta com inúmeras funções as quais auxiliam desenvolvedores. Para fazer o download do mesmo acesse [VSCode Download](https://code.visualstudio.com/Download), selecione seu sistema operacional e prossiga a instalação da maneira que já vem previamente recomendada. 
+
+### Leaflet e Bootstrap
+> Ambos os frameworks já têm seus arquivos alocados na pasta de nosso projeto, não sendo necesário o download ou instalação dos mesmos. Entretanto, caso seja do interesse, o link para o sie oficial de ambos com o download e a documentação é [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/download/) e [Leaflet](https://leafletjs.com/index.html).
+
+### Node.js
+> Para auxiliar no desenvolvimento do back-end foi utilizado o Node.js, um interpretador de JavaScript que não depende do navegador. Para instalá-lo, acesse [Node.js](https://nodejs.org/en/) e selecione a versão LTS corresponde ao seu sistema operacional. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
 ### QGIS
 > Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [QGIS download](https://qgis.org/pt_BR/site/forusers/download.html), selecione seu sistema operacional, vá até Repositório de Lançamento de Longa Duração e então baixe a versão Standalone correspondente a sua máquina. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
@@ -48,9 +57,6 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > 4. Clique em instalar complemento
 > 5. Após instalar, clique em web (Barra superior do aplicativo)
 > 6. Selecione qgis2web e comece a explorar o plug-in
-> 
-### Node.js
-> Para auxiliar no desenvolvimento do back-end foi utilizado o Node.js, um interpretador de JavaScript que não depende do navegador. Para instalá-lo, acesse [Node.js](https://nodejs.org/en/) e selecione a versão LTS corresponde ao seu sistema operacional. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
 ## 🧠 Funcionalidades 
 
