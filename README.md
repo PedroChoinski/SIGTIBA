@@ -40,12 +40,12 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 
 ### QGIS2WEB
 > Dentro do QGIS, foi utilizado um plug-in o qual auxilia na transformação do mapa (.qgz) em um código-fonte legível por navegadores web. Caso deseje testar tal ferramenta ou incrementar funcionalidades no projeto, siga os seguintes passos:
-1. Clique em complementos (Barra superior do aplicativo)
-2. Clique em gerenciar e instalar complementos
-3. Na barra de busca insira "qgis2web"
-4. Clique em instalar complemento
-5. Após instalar, clique em web (Barra superior do aplicativo)
-6. Selecione qgis2web e comece a explorar o plug-in
+> 1. Clique em complementos (Barra superior do aplicativo)
+> 2. Clique em gerenciar e instalar complementos
+> 3. Na barra de busca insira "qgis2web"
+> 4. Clique em instalar complemento
+> 5. Após instalar, clique em web (Barra superior do aplicativo)
+> 6. Selecione qgis2web e comece a explorar o plug-in
 
 ### Android Studio
 
