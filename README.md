@@ -39,7 +39,13 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [QGIS download](https://qgis.org/pt_BR/site/forusers/download.html), selecione seu sistema operacional, vá até Repositório de Lançamento de Longa Duração e então baixe a versão Standalone correspondente a sua máquina. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
 ### QGIS2WEB
-> Dentro do QGIS, foi utilizado um plug-in o qual auxilia na transformação do mapa (.qgs) em um código-fonte legível por navegadores web. Caso deseje testar tal funcionalidade ou incrementar funcionalidades no projeto, acesse a aba 
+> Dentro do QGIS, foi utilizado um plug-in o qual auxilia na transformação do mapa (.qgz) em um código-fonte legível por navegadores web. Caso deseje testar tal ferramenta ou incrementar funcionalidades no projeto, siga os seguintes passos:
+1. Clique em complementos (Barra superior do aplicativo)
+2. Clique em gerenciar e instalar complementos
+3. Na barra de busca insira "qgis2web"
+4. Clique em instalar complemento
+5. Após instalar, clique em web (Barra superior do aplicativo)
+6. Selecione qgis2web e comece a explorar o plug-in
 
 ### Android Studio
 
