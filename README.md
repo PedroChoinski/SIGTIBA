@@ -12,7 +12,7 @@
  <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-instalações-e-configurações-necessárias">Instalações e Configurações Necessárias</a> • 
-  <a href="#-executando-aplicação">Executando aplicação</a> • 
+  <a href="#-funcionalidades">Funcionalidades</a> • 
  <a href="#-desenvolvedores">Desenvolvedores</a>
 </p>
 
@@ -51,6 +51,10 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > 
 ### Node.js
 > Para auxiliar no desenvolvimento do back-end foi utilizado o Node.js, um interpretador de JavaScript que não depende do navegador. Para instalá-lo, acesse [Node.js](https://nodejs.org/en/) e selecione a versão LTS corresponde ao seu sistema operacional. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
+
+## 🧠 Funcionalidades 
+
+  Para um resumo das funcionalidades do projeto, e ao funcionamento básico do mesmo, acesse nosso [quick start guide]().
 
 ## 👨🏼‍🎓 Desenvolvedores 
 <p align="center">
