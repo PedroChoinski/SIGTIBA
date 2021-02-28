@@ -12,7 +12,7 @@
  <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-instalações-e-configurações-necessárias">Instalações e Configurações Necessárias</a> • 
- <a href="#-como-executar-o-projeto">Como Executar o Projeto</a> •
+  <a href="#-como-executar-o-projeto">Como Executar o Projeto</a> • 
  <a href="#-funcionalidades">Funcionalidades</a> • 
  <a href="#-desenvolvedores">Desenvolvedores</a>
 </p>
