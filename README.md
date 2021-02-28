@@ -24,9 +24,11 @@
 ````QGIS 3.14````
 ````qgis2web plugin 3.16.0````
 ````Leaflet 1.7.1````
-````JavaScript````
-````Windows 10````
-````Node JS````
+````JavaScript, CSS 3 e HTML 5````
+````Bootstrap 5.0````
+````SO: Windows 10````
+````Node.js 14.16.0````
+````MongoDB````
 
 ## 💻 Instalações e Configurações Necessárias
 
@@ -46,6 +48,9 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > 4. Clique em instalar complemento
 > 5. Após instalar, clique em web (Barra superior do aplicativo)
 > 6. Selecione qgis2web e comece a explorar o plug-in
+> 
+### Node.js
+> Para auxiliar no desenvolvimento do back-end foi utilizado o Node.js, um interpretador de JavaScript que não depende do navegador. Para instalá-lo, acesse [Node.js](https://nodejs.org/en/) e selecione a versão LTS corresponde ao seu sistema operacional. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
 ## 👨🏼‍🎓 Desenvolvedores 
 <p align="center">
