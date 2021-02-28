@@ -36,7 +36,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > Como editor de código-fonte, foi utilizado o VSCode, uma poderosa ferramenta com inúmeras funções as quais auxiliam desenvolvedores. Para fazer o download do mesmo acesse [VSCode Download](https://code.visualstudio.com/Download), selecione seu sistema operacional e prossiga a instalação da maneira que já vem previamente recomendada. 
 
 ### QGIS
-> Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [
+> Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [QGIS download](https://qgis.org/pt_BR/site/forusers/download.html), selecione seu sistema operacional, vá até Repositório de Lançamento de Longa Duração e então baixe a versão Standalone correspondente a sua máquina. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
 ### QGIS2WEB
 > Dentro do QGIS, foi utilizado um plug-in o qual auxilia na transformação do mapa (.qgs) em um código-fonte legível por navegadores web. Caso deseje testar tal funcionalidade ou incrementar funcionalidades no projeto, acesse a aba 
