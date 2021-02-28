@@ -54,7 +54,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 
 ## 🧠 Funcionalidades 
 
-  Para um resumo das funcionalidades do projeto, e ao funcionamento básico do mesmo, acesse nosso [quick start guide]().
+  Para uma introdução as funcionalidades do projeto e ao funcionamento básico do mesmo, baixe o nosso [quick start guide](https://github.com/PedroChoinski/SIGTIBA/blob/main/SIGTIBA%20-%20Quick%20Start%20Guide.docx).
 
 ## 👨🏼‍🎓 Desenvolvedores 
 <p align="center">
