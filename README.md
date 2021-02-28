@@ -12,7 +12,8 @@
  <a href="#-descrição-e-objetivo">Descrição e Objetivo</a> •
  <a href="#-ferramentas-utilizadas">Ferramentas Utilizadas</a> • 
  <a href="#-instalações-e-configurações-necessárias">Instalações e Configurações Necessárias</a> • 
-  <a href="#-funcionalidades">Funcionalidades</a> • 
+ <a href="#-como-executar-o-projeto">Como Executar o Projeto</a> •
+ <a href="#-funcionalidades">Funcionalidades</a> • 
  <a href="#-desenvolvedores">Desenvolvedores</a>
 </p>
 
@@ -57,6 +58,8 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > 4. Clique em instalar complemento
 > 5. Após instalar, clique em web (Barra superior do aplicativo)
 > 6. Selecione qgis2web e comece a explorar o plug-in
+
+## Como Executar o Projeto
 
 ## 🧠 Funcionalidades 
 
