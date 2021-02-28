@@ -59,8 +59,17 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 > 5. Após instalar, clique em web (Barra superior do aplicativo)
 > 6. Selecione qgis2web e comece a explorar o plug-in
 
-## Como Executar o Projeto
+## 🎬 Como Executar o Projeto
 
+  ### Ativando o back-end
+  > Blablablabla algum código no node blablabla
+
+  #### Conectando com o banco de dados
+  > Blablabla MongoDB
+  
+  ### Executando
+  > Finalmente, é preciso apenas executar o arquivo index.html e você será redirecionado para uma página no navegador com nossa aplicação aberta.
+  
 ## 🧠 Funcionalidades 
 
   Para uma introdução as funcionalidades do projeto e ao funcionamento básico do mesmo, baixe o nosso [quick start guide](https://github.com/PedroChoinski/SIGTIBA/blob/main/SIGTIBA%20-%20Quick%20Start%20Guide.docx).
