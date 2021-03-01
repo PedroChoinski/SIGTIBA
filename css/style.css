@@ -215,6 +215,7 @@ input.altura_desc {
 .btnData {
 	width: 100px;
   height: 100px;
+
 	position: absolute;
 	top: 90%;
 	left: 90%;
@@ -222,6 +223,7 @@ input.altura_desc {
 	text-align: center;
 	vertical-align: middle;
 	justify-content: center;
+
   color: black;
   text-align: center;
   background-color: rgba(46,139,87, 0.95);
