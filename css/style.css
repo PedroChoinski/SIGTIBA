@@ -5,13 +5,6 @@ nav {
     position: fixed;
 }
 
-btnData {
-  background-color: rgba(46,139,87, 0.95);
-  height: 10px;
-  color: black;
-  text-align: center;
-}
-
 #navbar-brand {
     padding: 10px;
     font-size: 20px;
@@ -86,7 +79,7 @@ p.minus{
   }
 
   .mg15{
-    margin: 0% 15%;
+    margin: 0% 3%;
   }
 
   .box{
@@ -97,6 +90,11 @@ p.minus{
   .box2{
     margin: 0% 10%;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+	  z-index: 1001;
+	  background-color: #f1f1f1;
+    top:10%;
+    left: 20%;
   }
 
   .pd30{
@@ -212,4 +210,19 @@ svg.margem {
 input.altura_desc {
   height: 120px;
 
+}
+
+.btnData {
+	width: 100px;
+  height: 100px;
+	position: absolute;
+	top: 90%;
+	left: 90%;
+	z-index: 1001;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+  color: black;
+  text-align: center;
+  background-color: rgba(46,139,87, 0.95);
 }
