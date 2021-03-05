@@ -24,7 +24,7 @@
         <style>
             html, body, #map {
                 width: 100%;
-                height: 100%;
+                height: 97.96%;
             }
         </style>
         
@@ -91,12 +91,12 @@
 
             if (e.target.feature.geometry.type === 'LineString') {
               highlightLayer.setStyle({
-                color: '#ffff00',
+                color: '#f2e966',
               });
             } else {
               highlightLayer.setStyle({
-                fillColor: '#ffff00',
-                fillOpacity: 0.5
+                fillColor: '##f2e966',
+                fillOpacity: 0.3
               });
             }
         }
@@ -198,7 +198,7 @@
                 lineJoin: 'miter',
                 weight: 3.0, 
                 fill: true,
-                fillOpacity: 0.11,
+                fillOpacity: 0,
                 fillColor: 'rgba(92,125,183,1.0)',
                 interactive: true,
             }
