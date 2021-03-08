@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="pt-br">
+
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -48,7 +49,7 @@
                             <a class="nav-link" href="urbanizacao.html">urbanização</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">login</a>
+                            <a class="nav-link" href="login.html">admin</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="adicao_registro.html">add registro</a>
@@ -58,33 +59,93 @@
             </nav>
     
         <div id="map">
+
         </div>
-        <script src="js/qgis2web_expressions.js"></script>
+    </nav>
+
+
+    <button class="btnData" onclick="openForm()">Open Form</button>
+    <input type="file" style="display:none" id="file-input" accept="image/*" oninput="create()" />
+
+    <div class="box2" id="box2" style="display: none">
+        <h1 class="under pd5px">Adição registro</h1><br>
+        <form class="mg15" id="mg15" style="display: none">
+            <label for="fname">Tipo</label><br>
+            <input type="radio" id="reg_hist" name="registro" value="historico">
+            <label for="historico" class="radio">Registro histórico</label>
+            <input type="radio" id="reg_soc" name="registro" value="social">
+            <label for="social" class="radio">Registro Social</label>
+            <input type="radio" id="reg_irr" name="registro" value="irregularidade">
+            <label for="irregularidade" class="radio">Registro de irregularidade</label><br><br>
+
+            <label for="fname">Endereço</label><br>
+            <input type="text" id="adress" name="adress" size="50%"><br><br>
+
+            <label for="lname">Descrição</label><br>
+            <input type="text" id="description" name="description" size="50%" class="altura_desc"><br><br>
+
+            <label for="lname">Autor</label><br>
+            <input type="text" id="author" name="author" size="50%"><br><br>
+
+            <label for="fname">Data</label><br>
+            <input type="date" id="date" name="date" size="50%"><br><br><br>
+
+            <div class="centralizar"><input type="submit" value="Enviar"></div><br>
+        </form>
+
+    </div>
+    <script>
+
+        function openForm() {
+            document.getElementById("box2").style.display ='block';
+            document.getElementById("mg15").style.display = 'block';
+            var ele = document.getElementsByName("registro");
+            for (var i = 0; i < ele.length; i++)
+                ele[i].checked = false;
+        }
+
+        function openFormType() {
+            var typeImage = document.querySelector('input[name="registro"]:checked').value;
+
+            console.log(typeImage);
+
+            if (typeImage == "historico") {
+                document.querySelector(".form-historic").style.display = "block";
+                document.querySelector(".form-irregular").style.display = "none";
+                console.log("foi selecionado o o formulario historico")
+            } else if (typeImage == "irregularidade") {
+                document.querySelector(".form-irregular").style.display = "block";
+                document.querySelector(".form-historic").style.display = "none";
+                console.log("foi selecionado o o formulario irregular");
+            }
+        }
+    </script>
+    <script src="js/qgis2web_expressions.js"></script>
         <script src="js/leaflet.js"></script><script src="js/L.Control.Locate.min.js"></script>
-        <script src="js/multi-style-layer.js"></script>
-        <script src="js/leaflet.rotatedMarker.js"></script>
-        <script src="js/leaflet.pattern.js"></script>
-        <script src="js/leaflet-hash.js"></script>
-        <script src="js/Autolinker.min.js"></script>
-        <script src="js/rbush.min.js"></script>
-        <script src="js/labelgun.min.js"></script>
-        <script src="js/labels.js"></script>
-        <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
-        <script src="js/leaflet-measure.js"></script>
-        <script src="js/leaflet.markercluster.js"></script>
-        <script src="data/BaciasHidrogrficas_4.js"></script>
-        <script src="data/reasdoZoneamento_5.js"></script>
-        <script src="data/LimitesdosBairros_6.js"></script>
-        <script src="data/reasdeOcupaoIrregular_7.js"></script>
-        <script src="data/ParqueseBosques_8.js"></script>
-        <script src="data/EstaesEcolgicas_9.js"></script>
-        <script src="data/RPPNM_10.js"></script>
-        <script src="data/RefgiosdaVidaSilvestre_11.js"></script>
-        <script src="data/RiosemFormatodePolgonos_12.js"></script>
-        <script src="data/LagosLagoaseRepresas_13.js"></script>
-        <script src="data/RiosemFormatodeLinhas_14.js"></script>
-        <script src="data/Registros_16.js"></script>
-        <script>
+    <script src="js/multi-style-layer.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.pattern.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/rbush.min.js"></script>
+    <script src="js/labelgun.min.js"></script>
+    <script src="js/labels.js"></script>
+    <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
+    <script src="js/leaflet-measure.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <script src="data/BaciasHidrogrficas_4.js"></script>
+    <script src="data/reasdoZoneamento_5.js"></script>
+    <script src="data/LimitesdosBairros_6.js"></script>
+    <script src="data/reasdeOcupaoIrregular_7.js"></script>
+    <script src="data/ParqueseBosques_8.js"></script>
+    <script src="data/EstaesEcolgicas_9.js"></script>
+    <script src="data/RPPNM_10.js"></script>
+    <script src="data/RefgiosdaVidaSilvestre_11.js"></script>
+    <script src="data/RiosemFormatodePolgonos_12.js"></script>
+    <script src="data/LagosLagoaseRepresas_13.js"></script>
+    <script src="data/RiosemFormatodeLinhas_14.js"></script>
+    <script src="data/Registros_16.js"></script>
+    <script>
         var highlightLayer;
         function highlightFeature(e) {
             highlightLayer = e.target;
@@ -93,6 +154,9 @@
               highlightLayer.setStyle({
                 color: '#f2e966',
               });
+                highlightLayer.setStyle({
+                    color: '#ffff00',
+                });
             } else {
               highlightLayer.setStyle({
                 fillColor: '##f2e966',
@@ -117,9 +181,9 @@
         });
         measureControl.addTo(map);
         document.getElementsByClassName('leaflet-control-measure-toggle')[0]
-        .innerHTML = '';
+            .innerHTML = '';
         document.getElementsByClassName('leaflet-control-measure-toggle')[0]
-        .className += ' fas fa-ruler';
+            .className += ' fas fa-ruler';
         var bounds_group = new L.featureGroup([]);
         function setBounds() {
         }
@@ -271,63 +335,63 @@
                     break;
                 case 'EIXO ESTRUTURANTES':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(241,124,74,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(241,124,74,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'EIXO METROPOLITANO - LINHA VERDE':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(253,174,97,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(253,174,97,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'EIXOS CONECTORES':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(254,201,128,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(254,201,128,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'EIXOS DE ADENSAMENTO':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(255,228,160,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(255,228,160,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'UNIDADE DE CONSERVAÇÃO':
                     return {
@@ -346,18 +410,18 @@
                     break;
                 case 'ZONAS COM DESTINAÇÃO ESPECÍFICA':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(227,244,182,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(227,244,182,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU':
                     return {
@@ -391,48 +455,48 @@
                     break;
                 case 'ZONAS DE USO MISTO':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(128,191,172,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(128,191,172,1.0)',
+                        interactive: true,
+                    }
                     break;
                 case 'ZONAS RESIDENCIAIS':
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(86,161,179,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(86,161,179,1.0)',
+                        interactive: true,
+                    }
                     break;
                 default:
                     return {
-                pane: 'pane_reasdoZoneamento_5',
-                opacity: 1,
-                color: 'rgba(35,35,35,1.0)',
-                dashArray: '',
-                lineCap: 'butt',
-                lineJoin: 'miter',
-                weight: 1.0, 
-                fill: true,
-                fillOpacity: 1,
-                fillColor: 'rgba(226,31,255,1.0)',
-                interactive: true,
-            }
+                        pane: 'pane_reasdoZoneamento_5',
+                        opacity: 1,
+                        color: 'rgba(35,35,35,1.0)',
+                        dashArray: '',
+                        lineCap: 'butt',
+                        lineJoin: 'miter',
+                        weight: 1.0,
+                        fill: true,
+                        fillOpacity: 1,
+                        fillColor: 'rgba(226,31,255,1.0)',
+                        interactive: true,
+                    }
                     break;
             }
         }
@@ -478,7 +542,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 3.0, 
+                weight: 3.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(196,60,57,0.0)',
@@ -498,7 +562,6 @@
             style: style_LimitesdosBairros_6_0,
         });
         bounds_group.addLayer(layer_LimitesdosBairros_6);
-        map.addLayer(layer_LimitesdosBairros_6);
         function pop_reasdeOcupaoIrregular_7(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -530,7 +593,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(255,98,0,1.0)',
@@ -578,7 +641,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(178,231,93,1.0)',
@@ -632,7 +695,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(0,66,0,1.0)',
@@ -686,7 +749,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(86,160,99,1.0)',
@@ -737,7 +800,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(108,83,0,1.0)',
@@ -782,7 +845,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(7,14,87,1.0)',
@@ -830,7 +893,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fill: true,
                 fillOpacity: 1,
                 fillColor: 'rgba(7,14,87,1.0)',
@@ -845,7 +908,7 @@
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 1.0,
                 fillOpacity: 0,
                 interactive: true,
             }
@@ -963,6 +1026,7 @@
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
+            map.addLayer(layer_RtulosdoGoogle_15);
         }
 
         function style_Registros_16_0(feature) {
@@ -1002,18 +1066,63 @@
         }),
                 interactive: true,
             }
+                        pane: 'pane_Registros_16',
+                        rotationAngle: 0.0,
+                        rotationOrigin: 'center center',
+                        icon: L.icon({
+                            iconUrl: 'markers/human.svg',
+                            iconSize: [30.4, 30.4]
+                        }),
+                        interactive: true,
+                    }
+                    break;
+                case 'Transporte':
+                    return {
+                        pane: 'pane_Registros_16',
+                        rotationAngle: 0.0,
+                        rotationOrigin: 'center center',
+                        icon: L.icon({
+                            iconUrl: 'markers/bus.svg',
+                            iconSize: [38.0, 38.0]
+                        }),
+                        interactive: true,
+                    }
+                    break;
+                case 'Ambiental':
+                    return {
+                        pane: 'pane_Registros_16',
+                        rotationAngle: 0.0,
+                        rotationOrigin: 'center center',
+                        icon: L.icon({
+                            iconUrl: 'markers/arvore.svg',
+                            iconSize: [30.4, 30.4]
+                        }),
+                        interactive: true,
+                    }
+                    break;
+                case 'Histórico':
+                    return {
+                        pane: 'pane_Registros_16',
+                        rotationAngle: 0.0,
+                        rotationOrigin: 'center center',
+                        icon: L.icon({
+                            iconUrl: 'markers/camera.svg',
+                            iconSize: [26.599999999999998, 26.599999999999998]
+                        }),
+                        interactive: true,
+                    }
                     break;
                 default:
                     return {
-                pane: 'pane_Registros_16',
-        rotationAngle: 0.0,
-        rotationOrigin: 'center center',
-        icon: L.icon({
-            iconUrl: 'markers/alert.svg',
-            iconSize: [26.599999999999998, 26.599999999999998]
-        }),
-                interactive: true,
-            }
+                        pane: 'pane_Registros_16',
+                        rotationAngle: 0.0,
+                        rotationOrigin: 'center center',
+                        icon: L.icon({
+                            iconUrl: 'markers/alert.svg',
+                            iconSize: [26.599999999999998, 26.599999999999998]
+                        }),
+                        interactive: true,
+                    }
                     break;
             }
         }
@@ -1047,9 +1156,9 @@
             title: 'Testing'
         }).addTo(map);
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
-        .className += ' fa fa-search';
+            .className += ' fa fa-search';
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
-        .title += 'Search for a place';
+            .title += 'Search for a place';
         var baseMaps = {};
         L.control.layers(baseMaps,{'Registros<br /><table><tr><td style="text-align: center;"><img src="legend/Registros_16_Social0.png" /></td><td>Social</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Ambiental2.png" /></td><td>Ambiental</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Histórico3.png" /></td><td>Histórico</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_4.png" /></td><td></td></tr></table>': cluster_Registros_16,"Rótulos do Google": layer_RtulosdoGoogle_15,'<img src="legend/RiosemFormatodeLinhas_14.png" /> Rios em Formato de Linhas': layer_RiosemFormatodeLinhas_14,'<img src="legend/LagosLagoaseRepresas_13.png" /> Lagos, Lagoas e Represas': layer_LagosLagoaseRepresas_13,'<img src="legend/RiosemFormatodePolgonos_12.png" /> Rios em Formato de Polígonos': layer_RiosemFormatodePolgonos_12,'<img src="legend/RefgiosdaVidaSilvestre_11.png" /> Refúgios da Vida Silvestre': layer_RefgiosdaVidaSilvestre_11,'<img src="legend/RPPNM_10.png" /> RPPNM': layer_RPPNM_10,'<img src="legend/EstaesEcolgicas_9.png" /> Estações Ecológicas': layer_EstaesEcolgicas_9,'<img src="legend/ParqueseBosques_8.png" /> Parques e Bosques': layer_ParqueseBosques_8,'<img src="legend/reasdeOcupaoIrregular_7.png" /> Áreas de Ocupação Irregular': layer_reasdeOcupaoIrregular_7,'<img src="legend/LimitesdosBairros_6.png" /> Limites dos Bairros ': layer_LimitesdosBairros_6,'Áreas do Zoneamento<br /><table><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONACENTRAL0.png" /></td><td>ZONA CENTRAL</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_SETORESESPECIAIS1.png" /></td><td>SETORES ESPECIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOESTRUTURANTES2.png" /></td><td>EIXO ESTRUTURANTES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOMETROPOLITANOLINHAVERDE3.png" /></td><td>EIXO METROPOLITANO - LINHA VERDE</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSCONECTORES4.png" /></td><td>EIXOS CONECTORES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSDEADENSAMENTO5.png" /></td><td>EIXOS DE ADENSAMENTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_UNIDADEDECONSERVAÇÃO6.png" /></td><td>UNIDADE DE CONSERVAÇÃO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASCOMDESTINAÇÃOESPECÍFICA7.png" /></td><td>ZONAS COM DESTINAÇÃO ESPECÍFICA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOIGUAÇU8.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOPASSAÚNA9.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASDEUSOMISTO10.png" /></td><td>ZONAS DE USO MISTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASRESIDENCIAIS11.png" /></td><td>ZONAS RESIDENCIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_12.png" /></td><td></td></tr></table>': layer_reasdoZoneamento_5,'<img src="legend/BaciasHidrogrficas_4.png" /> Bacias Hidrográficas ': layer_BaciasHidrogrficas_4,"ESRI Relevo Sombreado": layer_ESRIRelevoSombreado_3,"ESRI Satélite": layer_ESRISatlite_2,"Google Satélite": layer_GoogleSatlite_1,"Google Mapa ": layer_GoogleMapa_0,}).addTo(map);
         setBounds();
@@ -1066,4 +1175,5 @@
         </script>
 
     </body>
+
 </html>
