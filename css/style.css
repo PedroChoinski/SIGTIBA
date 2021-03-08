@@ -2,13 +2,7 @@ nav {
     background-color: rgba(46,139,87, 0.95);
     height: 60px;
     color: black;
-}
-
-btnData {
-  background-color: rgba(46,139,87, 0.95);
-  height: 10px;
-  color: black;
-  text-align: center;
+    position: fixed;
 }
 
 #navbar-brand {
@@ -25,7 +19,13 @@ a:hover {
 }
 
 p{
-  font-size: 24px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+p.minus{
+  font-size: 16px;
+  text-align: justify;
 }
 
 .slidecontainer {
@@ -72,8 +72,14 @@ p{
       color: #404040;
   }
 
+  h2{
+    font-size: 26px;
+    color: #404040;
+    text-align: center;
+  }
+
   .mg15{
-    margin: 0% 15%;
+    margin: 0% 3%;
   }
 
   .box{
@@ -84,6 +90,11 @@ p{
   .box2{
     margin: 0% 10%;
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+    position: absolute;
+	  z-index: 1001;
+	  background-color: #f1f1f1;
+    top:10%;
+    left: 20%;
   }
 
   .pd30{
@@ -129,4 +140,84 @@ p{
   
 .verdinho{
   color: rgba(46,139,87, 0.95);
+}
+
+div.gallery {
+  margin: 5px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+  float: left;
+  width: 370px;
+}
+
+div.reqs_content {
+  margin: 0px 10%;
+  float: left;
+}
+
+div.gallery:hover {
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding:15px;
+  text-align: center;
+}
+
+div.type {
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+div.author {
+  padding: 0px 0px 10px 0px;
+  text-align: center;
+}
+
+div.source {
+  padding: 0px 0px 10px 10px;
+}
+
+div.title {
+  padding: 7px;
+  text-align: center;
+  font-weight: bold;
+  border-bottom: 4px solid rgba(55, 151, 97, 0.95);
+  color: #404040;
+}
+
+label.radio {
+  margin-right: 20px;
+  font-size: 15px;
+}
+
+svg.margem {
+  margin: 80px;
+}
+
+input.altura_desc {
+  height: 120px;
+}
+
+}
+
+.btnData {
+	width: 100px;
+  height: 100px;
+
+	position: absolute;
+	top: 90%;
+	left: 90%;
+	z-index: 1001;
+	text-align: center;
+	vertical-align: middle;
+	justify-content: center;
+
+  color: black;
+  text-align: center;
+  background-color: rgba(46,139,87, 0.95);
 }
