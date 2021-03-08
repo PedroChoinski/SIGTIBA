@@ -69,25 +69,34 @@
     <div class="box3" id="box3" style="display: none">
         <h2 class="under pd5px">Adicionar registro</h1><br>
         <form class="mg15" id="mg15" style="display: none">
-            <label for="fname">Tipo</label><br>
-            <input type="radio" id="reg_hist" name="registro" value="historico">
-            <label for="historico" class="radio">Registro histórico</label>
-            <input type="radio" id="reg_soc" name="registro" value="social">
-            <label for="social" class="radio">Registro Social</label>
-            <input type="radio" id="reg_irr" name="registro" value="irregularidade">
-            <label for="irregularidade" class="radio">Registro de irregularidade</label><br><br>
+
+            <label for="fname">Categoria:</label><br>
+                <select name="type" id="type">
+                    <option value="r_hist">Registro histórico</option>
+                    <option value="r_soc">Registro social</option>
+                    <option value="r_amb">Registro ambiental</option>
+                </select><br><br>
+
+            <label for="fname">Sub-categoria:</label><br>
+                <select name="sub_type" id="sub_type">
+                    <option value="s_transporte">Irregularidade no transporte publico</option>
+                    <option value="s_foto">Fotografia antiga</option>
+                    <option value="s_amb">Irregularidade ambiental</option>
+                    <option value="s_tip">Dica</option>
+                    <option value="s_sug">Sugestão de melhoria</option>
+                </select><br><br>
 
             <label for="fname">Endereço</label><br>
-            <input type="text" id="adress" name="adress" size="50%"><br><br>
+            <input class="pd10" type="text" id="adress" name="adress" size="38%"><br><br>
 
             <label for="lname">Descrição</label><br>
-            <input type="text" id="description" name="description" size="50%" class="altura_desc"><br><br>
+            <input type="text" id="description" name="description" size="47px" class="altura_desc"><br><br>
 
             <label for="lname">Autor</label><br>
-            <input type="text" id="author" name="author" size="50%"><br><br>
+            <input type="text" id="author" name="author" size="47px"><br><br>
 
             <label for="fname">Data</label><br>
-            <input type="date" id="date" name="date" size="50%"><br><br><br>
+            <input type="date" id="date" name="date" size="47px"><br><br><br>
 
             <div class="centralizar"><input type="submit" value="Enviar"></div><br>
         </form>
