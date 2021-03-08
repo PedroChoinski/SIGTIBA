@@ -25,7 +25,7 @@
         <style>
             html, body, #map {
                 width: 100%;
-                height: 100%;
+                height: 97.96%;
             }
         </style>
         
@@ -151,13 +151,16 @@
             highlightLayer = e.target;
 
             if (e.target.feature.geometry.type === 'LineString') {
+              highlightLayer.setStyle({
+                color: '#f2e966',
+              });
                 highlightLayer.setStyle({
                     color: '#ffff00',
                 });
             } else {
               highlightLayer.setStyle({
-                fillColor: '#ffff00',
-                fillOpacity: 0.5
+                fillColor: '##f2e966',
+                fillOpacity: 0.3
               });
             }
         }
@@ -258,8 +261,8 @@
                 lineCap: 'butt',
                 lineJoin: 'miter',
                 weight: 3.0, 
-                fill: false,
-                fillOpacity: 1,
+                fill: true,
+                fillOpacity: 0,
                 fillColor: 'rgba(92,125,183,1.0)',
                 interactive: true,
             }
@@ -1029,6 +1032,39 @@
             switch(String(feature.properties['categoria'])) {
                 case 'Social':
                     return {
+                pane: 'pane_Registros_16',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/human.png',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+                    break;
+                case 'Ambiental':
+                    return {
+                pane: 'pane_Registros_16',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/arvore.png',
+            iconSize: [30.4, 30.4]
+        }),
+                interactive: true,
+            }
+                    break;
+                case 'Histórico':
+                    return {
+                pane: 'pane_Registros_16',
+        rotationAngle: 0.0,
+        rotationOrigin: 'center center',
+        icon: L.icon({
+            iconUrl: 'markers/camera.png',
+            iconSize: [26.599999999999998, 26.599999999999998]
+        }),
+                interactive: true,
+            }
                         pane: 'pane_Registros_16',
                         rotationAngle: 0.0,
                         rotationOrigin: 'center center',
@@ -1123,7 +1159,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
             .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Registros<br /><table><tr><td style="text-align: center;"><img src="legend/Registros_16_Social0.png" /></td><td>Social</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Transporte1.png" /></td><td>Transporte</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Ambiental2.png" /></td><td>Ambiental</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Histórico3.png" /></td><td>Histórico</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_4.png" /></td><td></td></tr></table>': cluster_Registros_16,"Rótulos do Google": layer_RtulosdoGoogle_15,'<img src="legend/RiosemFormatodeLinhas_14.png" /> Rios em Formato de Linhas': layer_RiosemFormatodeLinhas_14,'<img src="legend/LagosLagoaseRepresas_13.png" /> Lagos, Lagoas e Represas': layer_LagosLagoaseRepresas_13,'<img src="legend/RiosemFormatodePolgonos_12.png" /> Rios em Formato de Polígonos': layer_RiosemFormatodePolgonos_12,'<img src="legend/RefgiosdaVidaSilvestre_11.png" /> Refúgios da Vida Silvestre': layer_RefgiosdaVidaSilvestre_11,'<img src="legend/RPPNM_10.png" /> RPPNM': layer_RPPNM_10,'<img src="legend/EstaesEcolgicas_9.png" /> Estações Ecológicas': layer_EstaesEcolgicas_9,'<img src="legend/ParqueseBosques_8.png" /> Parques e Bosques': layer_ParqueseBosques_8,'<img src="legend/reasdeOcupaoIrregular_7.png" /> Áreas de Ocupação Irregular': layer_reasdeOcupaoIrregular_7,'<img src="legend/LimitesdosBairros_6.png" /> Limites dos Bairros ': layer_LimitesdosBairros_6,'Áreas do Zoneamento<br /><table><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONACENTRAL0.png" /></td><td>ZONA CENTRAL</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_SETORESESPECIAIS1.png" /></td><td>SETORES ESPECIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOESTRUTURANTES2.png" /></td><td>EIXO ESTRUTURANTES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOMETROPOLITANOLINHAVERDE3.png" /></td><td>EIXO METROPOLITANO - LINHA VERDE</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSCONECTORES4.png" /></td><td>EIXOS CONECTORES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSDEADENSAMENTO5.png" /></td><td>EIXOS DE ADENSAMENTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_UNIDADEDECONSERVAÇÃO6.png" /></td><td>UNIDADE DE CONSERVAÇÃO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASCOMDESTINAÇÃOESPECÍFICA7.png" /></td><td>ZONAS COM DESTINAÇÃO ESPECÍFICA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOIGUAÇU8.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOPASSAÚNA9.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASDEUSOMISTO10.png" /></td><td>ZONAS DE USO MISTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASRESIDENCIAIS11.png" /></td><td>ZONAS RESIDENCIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_12.png" /></td><td></td></tr></table>': layer_reasdoZoneamento_5,'<img src="legend/BaciasHidrogrficas_4.png" /> Bacias Hidrográficas ': layer_BaciasHidrogrficas_4,"ESRI Relevo Sombreado": layer_ESRIRelevoSombreado_3,"ESRI Satélite": layer_ESRISatlite_2,"Google Satélite": layer_GoogleSatlite_1,"Google Mapa ": layer_GoogleMapa_0,}).addTo(map);
+        L.control.layers(baseMaps,{'Registros<br /><table><tr><td style="text-align: center;"><img src="legend/Registros_16_Social0.png" /></td><td>Social</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Ambiental2.png" /></td><td>Ambiental</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Histórico3.png" /></td><td>Histórico</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_4.png" /></td><td></td></tr></table>': cluster_Registros_16,"Rótulos do Google": layer_RtulosdoGoogle_15,'<img src="legend/RiosemFormatodeLinhas_14.png" /> Rios em Formato de Linhas': layer_RiosemFormatodeLinhas_14,'<img src="legend/LagosLagoaseRepresas_13.png" /> Lagos, Lagoas e Represas': layer_LagosLagoaseRepresas_13,'<img src="legend/RiosemFormatodePolgonos_12.png" /> Rios em Formato de Polígonos': layer_RiosemFormatodePolgonos_12,'<img src="legend/RefgiosdaVidaSilvestre_11.png" /> Refúgios da Vida Silvestre': layer_RefgiosdaVidaSilvestre_11,'<img src="legend/RPPNM_10.png" /> RPPNM': layer_RPPNM_10,'<img src="legend/EstaesEcolgicas_9.png" /> Estações Ecológicas': layer_EstaesEcolgicas_9,'<img src="legend/ParqueseBosques_8.png" /> Parques e Bosques': layer_ParqueseBosques_8,'<img src="legend/reasdeOcupaoIrregular_7.png" /> Áreas de Ocupação Irregular': layer_reasdeOcupaoIrregular_7,'<img src="legend/LimitesdosBairros_6.png" /> Limites dos Bairros ': layer_LimitesdosBairros_6,'Áreas do Zoneamento<br /><table><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONACENTRAL0.png" /></td><td>ZONA CENTRAL</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_SETORESESPECIAIS1.png" /></td><td>SETORES ESPECIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOESTRUTURANTES2.png" /></td><td>EIXO ESTRUTURANTES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOMETROPOLITANOLINHAVERDE3.png" /></td><td>EIXO METROPOLITANO - LINHA VERDE</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSCONECTORES4.png" /></td><td>EIXOS CONECTORES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSDEADENSAMENTO5.png" /></td><td>EIXOS DE ADENSAMENTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_UNIDADEDECONSERVAÇÃO6.png" /></td><td>UNIDADE DE CONSERVAÇÃO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASCOMDESTINAÇÃOESPECÍFICA7.png" /></td><td>ZONAS COM DESTINAÇÃO ESPECÍFICA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOIGUAÇU8.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOPASSAÚNA9.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASDEUSOMISTO10.png" /></td><td>ZONAS DE USO MISTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASRESIDENCIAIS11.png" /></td><td>ZONAS RESIDENCIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_12.png" /></td><td></td></tr></table>': layer_reasdoZoneamento_5,'<img src="legend/BaciasHidrogrficas_4.png" /> Bacias Hidrográficas ': layer_BaciasHidrogrficas_4,"ESRI Relevo Sombreado": layer_ESRIRelevoSombreado_3,"ESRI Satélite": layer_ESRISatlite_2,"Google Satélite": layer_GoogleSatlite_1,"Google Mapa ": layer_GoogleMapa_0,}).addTo(map);
         setBounds();
         resetLabels([layer_reasdoZoneamento_5]);
         map.on("zoomend", function(){
