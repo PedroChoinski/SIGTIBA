@@ -15,6 +15,8 @@
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <link rel="stylesheet" href="css/style.css">
 
+        <link rel="icon" type="imagem/ico" href="photos/favicon.ico">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -34,11 +36,11 @@
         </head>
         <body>
 
-            <nav class="navbar navbar-expand-lg pd10">
-                <a class="navbar-brand" href="index.html">SIGTIBA</a>
-        
+            <nav class="navbar navbar-expand-lg pd10" style="padding-top: 12px;">
+                <a class="navbar-brand pd10" href="index.html">SIGTIBA</a>
+
                 <div class="navbar navbar-collapse">
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="navbar-nav ml-auto" style="padding-right: 10%;">
                         <li class="nav-item">
                             <a class="nav-link" href="index.html">webmapa</a>
                         </li>
@@ -49,10 +51,7 @@
                             <a class="nav-link" href="urbanizacao.html">urbanização</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="login.html">admin</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="adicao_registro.html">add registro</a>
+                            <a class="nav-link" href="tela_admin.html">registros pendentes</a>
                         </li>
                     </ul>
                 </div>
@@ -63,7 +62,7 @@
         </div>
     </nav>
 
-    <button class="btnData1" onclick="openForm()">Adicionar registro</button>
+    <button class="btnData1" onclick="openForm()" onMouseOver="this.style.color='rgba(46,139,87, 0.95)'" onMouseOut="this.style.color='#202020'">Adicionar registro</button>
     <input type="file" style="display:none" id="file-input" accept="image/*" oninput="create()" />
 
     <div class="box3" id="box3" style="display: none">
@@ -102,6 +101,7 @@
         </form>
 
     </div>
+
     <script>
 
         function openForm() {
