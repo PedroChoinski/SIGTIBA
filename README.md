@@ -61,12 +61,19 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 
 ## 🎬 Como Executar o Projeto
 
-  ### Ativando o back-end
-  > Blablablabla algum código no node blablabla
+  ### Iniciando o Servidor do Node.js
+  > Para iniciar o servidor do Node.js integrado ao banco de dados é necessário abrir o prompt de comando de seu sistema operacional, ir até o diretório em que se encontra o projeto, e executar o comando "npm start".
 
-  #### Conectando com o banco de dados
-  > Blablabla MongoDB
+  #### Algumas Pacotes que Deverão ser Instalados
   
+    Para auxiliar no desenvolvimento foram instalados alguns pacotes. No diretório do seu projeto, execute os respectivos comandos que instalam tais pacotes para estar apto a desenvolver. Clique no nome de cada um deles para ser direcionado a uma página de tutorial básico para a instalação.
+  
+  > 1. [Nodemon](https://www.npmjs.com/package/nodemon)
+  > 2. [Multer](https://www.npmjs.com/package/multer)
+  > 3. [Body-Parser](https://www.npmjs.com/package/body-parser)
+  > 4. [Express](https://www.npmjs.com/package/express)
+  > 5. [Multer Gridfs Storage](https://www.npmjs.com/package/multer-gridfs-storage)
+
   ### Executando
   > Finalmente, é preciso apenas executar o arquivo index.html e você será redirecionado para uma página no navegador com nossa aplicação aberta.
   
