@@ -64,7 +64,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
   ### Iniciando o Servidor do Node.js
   > Para iniciar o servidor do Node.js integrado ao banco de dados é necessário abrir o prompt de comando de seu sistema operacional, ir até o diretório em que se encontra o projeto, e executar o comando "npm start".
 
-  #### Algumas Pacotes que Deverão ser Instalados
+  #### Alguns Pacotes que Deverão ser Instalados
   
    Para auxiliar no desenvolvimento foram instalados alguns pacotes. No diretório do seu projeto, execute os respectivos comandos que instalam tais pacotes para estar apto a desenvolver. Clique no nome de cada um deles para ser direcionado a uma página de tutorial básico para a instalação.
   
