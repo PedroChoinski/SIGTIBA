@@ -66,7 +66,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 
   #### Algumas Pacotes que Deverão ser Instalados
   
-    Para auxiliar no desenvolvimento foram instalados alguns pacotes. No diretório do seu projeto, execute os respectivos comandos que instalam tais pacotes para estar apto a desenvolver. Clique no nome de cada um deles para ser direcionado a uma página de tutorial básico para a instalação.
+   Para auxiliar no desenvolvimento foram instalados alguns pacotes. No diretório do seu projeto, execute os respectivos comandos que instalam tais pacotes para estar apto a desenvolver. Clique no nome de cada um deles para ser direcionado a uma página de tutorial básico para a instalação.
   
   > 1. [Nodemon](https://www.npmjs.com/package/nodemon)
   > 2. [Multer](https://www.npmjs.com/package/multer)
