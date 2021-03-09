@@ -75,7 +75,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
   > 5. [Multer Gridfs Storage](https://www.npmjs.com/package/multer-gridfs-storage)
 
   ### Executando
-  > Finalmente, é preciso apenas executar o arquivo index.html e você será redirecionado para uma página no navegador com nossa aplicação aberta.
+  > Finalmente, para executar o projeto, após realizar todos os passos acima, você deve acessar o localhost padrão do Node.js em sua máquina (normalmente http://localhost:3000/), e então a aplicação será aberta em uma aba de seu navegador.
   
 ## 🧠 Funcionalidades 
 
