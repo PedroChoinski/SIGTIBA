@@ -86,19 +86,19 @@
                 </select><br><br>
 
             <label for="fname">Endereço</label><br>
-            <input class="pd10" type="text" id="adress" name="adress" size="38%"><br><br>
+            <input type="text" id="adress" name="adress" size="46em"><br><br>
 
             <label for="lname">Descrição</label><br>
-            <input type="text" id="description" name="description" size="47px" class="altura_desc"><br><br>
+            <input type="text" id="description" name="description" size="46em" class="altura_desc"><br><br>
 
             <label for="lname">Autor/Fonte</label><br>
-            <input type="text" id="author" name="author" size="47px"><br><br>
+            <input type="text" id="author" name="author" size="46em"><br><br>
             
             <label for="fname">Data aproximada da foto</label><br>
-            <input type="date" id="date" name="date" size="47px"><br><br>
+            <input type="date" id="date" name="date" size="46em"><br><br>
             
             <label for="fname">Imagem</label><br>
-            <input type="file" id="file" name="image" size="47px"><br><br><br>
+            <input type="file" id="file" name="image" size="46em"><br><br><br>
 
             <div class="centralizar"><input type="submit" value="Enviar"></div><br>
         </form>
@@ -323,7 +323,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(171, 183, 183, 1)',
+                fillColor: '#7f9099',
                 interactive: true,
             }
                     break;
@@ -338,7 +338,7 @@
                 weight: 1.0, 
                 fill: true,
                 fillOpacity: 1,
-                fillColor: 'rgba(103, 128, 159, 1)',
+                fillColor: '#9FB4C0',
                 interactive: true,
             }
                     break;
@@ -1112,8 +1112,10 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
             .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'Registros<br /><table><tr><td style="text-align: center;"><img src="legend/Registros_16_Social0.png" /></td><td>Social</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Ambiental2.png" /></td><td>Ambiental</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_Histórico3.png" /></td><td>Histórico</td></tr><tr><td style="text-align: center;"><img src="legend/Registros_16_4.png" /></td><td></td></tr></table>': cluster_Registros_16,"Rótulos do Google": layer_RtulosdoGoogle_15,'<img src="legend/RiosemFormatodeLinhas_14.png" /> Rios em Formato de Linhas': layer_RiosemFormatodeLinhas_14,'<img src="legend/LagosLagoaseRepresas_13.png" /> Lagos, Lagoas e Represas': layer_LagosLagoaseRepresas_13,'<img src="legend/RiosemFormatodePolgonos_12.png" /> Rios em Formato de Polígonos': layer_RiosemFormatodePolgonos_12,'<img src="legend/RefgiosdaVidaSilvestre_11.png" /> Refúgios da Vida Silvestre': layer_RefgiosdaVidaSilvestre_11,'<img src="legend/RPPNM_10.png" /> RPPNM': layer_RPPNM_10,'<img src="legend/EstaesEcolgicas_9.png" /> Estações Ecológicas': layer_EstaesEcolgicas_9,'<img src="legend/ParqueseBosques_8.png" /> Parques e Bosques': layer_ParqueseBosques_8,'<img src="legend/reasdeOcupaoIrregular_7.png" /> Áreas de Ocupação Irregular': layer_reasdeOcupaoIrregular_7,'<img src="legend/LimitesdosBairros_6.png" /> Limites dos Bairros ': layer_LimitesdosBairros_6,'Áreas do Zoneamento<br /><table><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONACENTRAL0.png" /></td><td>ZONA CENTRAL</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_SETORESESPECIAIS1.png" /></td><td>SETORES ESPECIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOESTRUTURANTES2.png" /></td><td>EIXO ESTRUTURANTES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOMETROPOLITANOLINHAVERDE3.png" /></td><td>EIXO METROPOLITANO - LINHA VERDE</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSCONECTORES4.png" /></td><td>EIXOS CONECTORES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSDEADENSAMENTO5.png" /></td><td>EIXOS DE ADENSAMENTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_UNIDADEDECONSERVAÇÃO6.png" /></td><td>UNIDADE DE CONSERVAÇÃO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASCOMDESTINAÇÃOESPECÍFICA7.png" /></td><td>ZONAS COM DESTINAÇÃO ESPECÍFICA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOIGUAÇU8.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOPASSAÚNA9.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASDEUSOMISTO10.png" /></td><td>ZONAS DE USO MISTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASRESIDENCIAIS11.png" /></td><td>ZONAS RESIDENCIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_12.png" /></td><td></td></tr></table>': layer_reasdoZoneamento_5,'<img src="legend/BaciasHidrogrficas_4.png" /> Bacias Hidrográficas ': layer_BaciasHidrogrficas_4,"ESRI Relevo Sombreado": layer_ESRIRelevoSombreado_3,"ESRI Satélite": layer_ESRISatlite_2,"Google Satélite": layer_GoogleSatlite_1,"Google Mapa ": layer_GoogleMapa_0,}).addTo(map);
-        setBounds();
+        L.control.layers(baseMaps,{
+        'Registros<br/><table style="width: 100%;"><tr><td style="text-align: center; padding-top: 5px;"><img src="legend/Registros_16_Social0.png"/></td><td style="text-align: center; padding-top: 5px;"><img src="legend/Registros_16_Ambiental2.png" /></td><td style="text-align: center; padding-top: 5px;"><img src="legend/Registros_16_Histórico3.png" /></td></tr><tr><td style="text-align: center; margin: 0px, 10px">Social</td><td style="text-align: center;">Ambiental</td><td style="text-align: center;">Histórico</td></tr></table>': cluster_Registros_16,"Rótulos do Google": layer_RtulosdoGoogle_15,'<img src="legend/RiosemFormatodeLinhas_14.png" /> Rios em Formato de Linhas': layer_RiosemFormatodeLinhas_14,'<img src="legend/LagosLagoaseRepresas_13.png" /> Lagos, Lagoas e Represas': layer_LagosLagoaseRepresas_13,'<img src="legend/RiosemFormatodePolgonos_12.png" /> Rios em Formato de Polígonos': layer_RiosemFormatodePolgonos_12,'<img src="legend/RefgiosdaVidaSilvestre_11.png" /> Refúgios da Vida Silvestre': layer_RefgiosdaVidaSilvestre_11,'<img src="legend/RPPNM_10.png" /> RPPNM': layer_RPPNM_10,'<img src="legend/EstaesEcolgicas_9.png" /> Estações Ecológicas': layer_EstaesEcolgicas_9,'<img src="legend/ParqueseBosques_8.png" /> Parques e Bosques': layer_ParqueseBosques_8,'<img src="legend/reasdeOcupaoIrregular_7.png" /> Áreas de Ocupação Irregular': layer_reasdeOcupaoIrregular_7,'<img src="legend/LimitesdosBairros_6.png" /> Limites dos Bairros ': layer_LimitesdosBairros_6,'Áreas do Zoneamento<br /><table><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONACENTRAL0.png" /></td><td>ZONA CENTRAL</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_SETORESESPECIAIS1.png" /></td><td>SETORES ESPECIAIS</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASCOMDESTINAÇÃOESPECÍFICA7.png" /></td><td>ZONAS COM DESTINAÇÃO ESPECÍFICA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOESTRUTURANTES2.png" /></td><td>EIXO ESTRUTURANTES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOMETROPOLITANOLINHAVERDE3.png" /></td><td>EIXO METROPOLITANO - LINHA VERDE</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSCONECTORES4.png" /></td><td>EIXOS CONECTORES</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_EIXOSDEADENSAMENTO5.png" /></td><td>EIXOS DE ADENSAMENTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_UNIDADEDECONSERVAÇÃO6.png" /></td><td>UNIDADE DE CONSERVAÇÃO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOIGUAÇU8.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO IGUAÇU</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ÁREADEPROTEÇÃOAMBIENTALDOPASSAÚNA9.png" /></td><td>ÁREA DE PROTEÇÃO AMBIENTAL DO PASSAÚNA</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASDEUSOMISTO10.png" /></td><td>ZONAS DE USO MISTO</td></tr><tr><td style="text-align: center;"><img src="legend/reasdoZoneamento_5_ZONASRESIDENCIAIS11.png" /></td><td>ZONAS RESIDENCIAIS</td></tr><tr><td style="text-align: center;"></td><td></td></tr></table>': layer_reasdoZoneamento_5,'<img src="legend/BaciasHidrogrficas_4.png" /> Bacias Hidrográficas ': layer_BaciasHidrogrficas_4,"ESRI Relevo Sombreado": layer_ESRIRelevoSombreado_3,"ESRI Satélite": layer_ESRISatlite_2,"Google Satélite": layer_GoogleSatlite_1,"Google Mapa ": layer_GoogleMapa_0,}).addTo(map);
+        
+            setBounds();
         resetLabels([layer_reasdoZoneamento_5]);
         map.on("zoomend", function(){
             resetLabels([layer_reasdoZoneamento_5]);
