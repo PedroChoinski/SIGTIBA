@@ -46,7 +46,7 @@ class connectionClass {
       this.client = await client.connect();
       console.log("Connected correctly to server");
       const db = this.client.db(dbName);
-      const col = db.collection('registers');
+      const col = this.client.db(dbName).collection('registers');
       const bucket = new mongodb.GridFSBucket(db, {
         bucketName: 'photos'
       });
