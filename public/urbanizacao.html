@@ -11,6 +11,9 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        
     <title>SIGTIBA</title>
 </head>
 
@@ -87,22 +90,32 @@
             for (var i = 0; i < ele.length; i++)
                 ele[i].checked = false;
         }
+    </script>
 
-        function openFormType() {
-            var typeImage = document.querySelector('input[name="registro"]:checked').value;
+    <script>
+        $("#mg15").submit(function () {
+            var formData = new FormData(this);
+            $('#mg15 input').val("");
+            document.getElementById("box3").style.display = 'none';
+            document.getElementById("mg15").style.display = 'none';
 
-            console.log(typeImage);
+            $.ajax({
+                url: 'images/photos/',
+                type: 'POST',
+                data: formData,
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (html) {
+                    alert('Data Send');
+                    $('#msg').html(html);
 
-            if (typeImage == "historico") {
-                document.querySelector(".form-historic").style.display = "block";
-                document.querySelector(".form-irregular").style.display = "none";
-                console.log("foi selecionado o o formulario historico")
-            } else if (typeImage == "irregularidade") {
-                document.querySelector(".form-irregular").style.display = "block";
-                document.querySelector(".form-historic").style.display = "none";
-                console.log("foi selecionado o o formulario irregular");
-            }
-        }
+                }
+            });
+            return false;
+
+
+        });
     </script>
 
     <br>
