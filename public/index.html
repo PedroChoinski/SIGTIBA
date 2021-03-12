@@ -99,8 +99,8 @@
             <input type="text" id="adress" name="adress" size="46em" style="margin-bottom: 15px"><br>
 
             <label for="fname">Coordenadas</label><br>
-            <input type="text" id="coord" name="coord" size="46em"><br>
-	        <span class="textinho verdinho" placeholder="XX.XXX, XX.XXX" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
+            <input type="text" id="coord" name="coord" size="46em" placeholder="XX.XXX, XX.XXX" pattern="[0-9]{2}.[0-9]{3} [0-9]{2}.[0-9]{3}" ><br>
+	        <span class="textinho verdinho" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
             <br>
 
             <label for="lname" style="margin-top: 10px">Descrição</label><br>
