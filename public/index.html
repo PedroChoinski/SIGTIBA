@@ -75,6 +75,9 @@
         <h2 class="under pd5px">Adicionar registro</h1><br>
         <form class="mg15" id="mg15" style="display: none">
 
+            <span class="textinho verdinho">Insira as informações da maneira mais completa possível para que seu registro tenha mais chances de ser aceito!</span>
+            <br><br>
+
             <label for="fname">Categoria:</label><br>
                 <select name="type" id="type">
                     <option value="r_hist">Registro histórico</option>
@@ -87,18 +90,21 @@
                     <option value="s_transporte">Irregularidade no transporte publico</option>
                     <option value="s_foto">Fotografia antiga</option>
                     <option value="s_amb">Irregularidade ambiental</option>
-                    <option value="s_tip">Dica</option>
+                    <option value="s_tip">Equipamentos urbanos</option>
                     <option value="s_sug">Sugestão de melhoria</option>
+                    <option value="s_sug">Lixo mal designado</option>
                 </select><br><br>
 
             <label for="fname">Endereço</label><br>
             <input type="text" id="adress" name="adress" size="46em"><br><br>
 
             <label for="fname">Coordenadas</label><br>
-            <input type="text" id="coord" name="coord" size="46em"><br><br>
+            <input type="text" id="coord" name="coord" size="46em"><br>
+	    <span class="textinho verdinho">Insira as coordenadas exatamente nesse formato, respeitando espaços e vírgula (primeiro longitude e depois latitude): XX.XXX, XX.XXX </span>
+            <br><br>
 
             <label for="lname">Descrição</label><br>
-            <input type="text" id="description" name="description" size="46em" class="altura_desc"><br><br>
+            <input type="text" id="description" name="description" size="46em"><br><br>
 
             <label for="lname">Autor/Fonte</label><br>
             <input type="text" id="author" name="author" size="46em"><br><br>
