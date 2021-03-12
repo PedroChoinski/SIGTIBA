@@ -266,3 +266,8 @@ border-bottom: 4px solid rgba(55, 151, 97, 0.95);
 .img {
   object-fit: cover;
 }
+
+.textinho {
+  font-size: 15px;
+  text-align: center;
+}
