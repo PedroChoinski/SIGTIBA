@@ -6,7 +6,7 @@ nav {
 }
 
 .textinho {
-  font-size: 15px;
+  font-size: 14px;
   text-align: center;
 }
 
@@ -107,7 +107,7 @@ h2{
   position: absolute;
   z-index: 1001;
   background-color: #ffffff;
-  top:10%;
+  top:7%;
   border-radius: 5px;
 }
 
