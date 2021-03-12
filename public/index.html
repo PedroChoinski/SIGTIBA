@@ -29,7 +29,7 @@
         body,
         #map {
             width: 100%;
-            height: 100%;
+            height: 97.96%;
         }
     </style>
 
@@ -39,11 +39,11 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg pd10">
-        <a class="navbar-brand" href="index.html">SIGTIBA</a>
+    <nav class="navbar navbar-expand-lg pd10" style="padding-top: 12px;">
+        <a class="navbar-brand pd10" href="index.html"><b>SIGTIBA</b></a>
 
         <div class="navbar navbar-collapse">
-            <ul class="navbar-nav ml-auto">
+            <ul class="navbar-nav ml-auto" style="padding-right: 10%;">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html">webmapa</a>
                 </li>
@@ -54,10 +54,7 @@
                     <a class="nav-link" href="urbanizacao.html">urbanização</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">admin</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="adicao_registro.html">add registro</a>
+                    <a class="nav-link" href="tela_admin.html">registros pendentes</a>
                 </li>
             </ul>
         </div>
@@ -69,43 +66,52 @@
     </nav>
 
 
-    <button class="btnData" id="btnData" onclick="openForm()">Open Form</button>
+    <button class="btnData1" onclick="openForm()" onMouseOver="this.style.color='rgba(46,139,87, 0.95)'" onMouseOut="this.style.color='#202020'">Adicionar registro</button>
+    <input type="file" style="display:none" id="file-input" accept="image/*" oninput="create()" />
 
-    <div class="box2" id="box2" style="display: none">
-        <h1 class="under pd5px">Adição registro</h1><br>
-        <form class="mg15" action="" id="mg15" style="display: none" enctype="multipart/form-data">
-            <label for="fname">Tipo</label><br>
-            <input type="radio" id="reg_hist" name="registro" value="historico">
-            <label for="historico" class="radio">Registro histórico</label>
+    <div class="box3" id="box3" style="display: none">
+        <h2 class="under pd5px">Adicionar registro</h1><br>
+        <form class="mg15" id="mg15" style="display: none">
 
-            <input type="radio" id="reg_soc" name="registro" value="social">
-            <label for="social" class="radio">Registro Social</label>
-            
-            <input type="radio" id="reg_irr" name="registro" value="irregularidade">
-            <label for="irregularidade" class="radio">Registro de irregularidade</label><br><br>
+            <label for="fname">Categoria:</label><br>
+                <select name="type" id="type">
+                    <option value="r_hist">Registro histórico</option>
+                    <option value="r_soc">Registro social</option>
+                    <option value="r_amb">Registro ambiental</option>
+                </select><br><br>
+
+            <label for="fname">Sub-categoria:</label><br>
+                <select name="sub_type" id="sub_type">
+                    <option value="s_transporte">Irregularidade no transporte publico</option>
+                    <option value="s_foto">Fotografia antiga</option>
+                    <option value="s_amb">Irregularidade ambiental</option>
+                    <option value="s_tip">Dica</option>
+                    <option value="s_sug">Sugestão de melhoria</option>
+                </select><br><br>
 
             <label for="fname">Endereço</label><br>
-            <input type="text" id="adress" name="adress" size="50%"><br><br>
+            <input type="text" id="adress" name="adress" size="46em"><br><br>
 
             <label for="lname">Descrição</label><br>
-            <input type="text" id="description" name="description" size="50%" class="altura_desc"><br><br>
+            <input type="text" id="description" name="description" size="46em" class="altura_desc"><br><br>
 
-            <label for="lname">Autor</label><br>
-            <input type="text" id="author" name="author" size="50%"><br><br>
+            <label for="lname">Autor/Fonte</label><br>
+            <input type="text" id="author" name="author" size="46em"><br><br>
+            
+            <label for="fname">Data aproximada da foto</label><br>
+            <input type="date" id="date" name="date" size="46em"><br><br>
+            
+            <label for="fname">Imagem</label><br>
+            <input type="file" id="file" name="image" size="46em"><br><br><br>
 
-            <label for="fname">Data</label><br>
-            <input type="date" id="date" name="date" size="50%"><br><br>
-
-            <input type="file" name="image" id="my_image" accept="image/*"><br><br><br>
             <div class="centralizar"><input type="submit" value="Enviar"></div><br>
         </form>
-
     </div>
     <script>
         $("#mg15").submit(function () {
             var formData = new FormData(this);
             $('#mg15 input').val("");
-            document.getElementById("box2").style.display = 'none';
+            document.getElementById("box3").style.display = 'none';
             document.getElementById("mg15").style.display = 'none';
 
             $.ajax({
@@ -128,7 +134,7 @@
     </script>
     <script>
         function openForm() {
-            document.getElementById("box2").style.display = 'block';
+            document.getElementById("box3").style.display = 'block';
             document.getElementById("mg15").style.display = 'block';
             var ele = document.getElementsByName("registro");
             for (var i = 0; i < ele.length; i++)
