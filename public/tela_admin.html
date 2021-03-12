@@ -104,16 +104,53 @@
                                                             '<div class="title">Dados do registro</div><br>' + 
                                                             '<div class="type">Registro do tipo: '+ data.tempCollection[i].registro + '</div>' +
                                                             '<div class="desc">Descrição: ' + data.tempCollection[i].description + '</div>'+
+                                                            '<div class="adress">Endereço: ' + data.tempCollection[i].adress + '</div>' +  
                                                             '<div class="author">Achado por: ' + data.tempCollection[i].author + '</div>' +
-                                                            '<div class="centralizar"><input type="submit" value="Enviar"></div><br>' +
+                                                             
+                                                            '<br><input type="button" class="confirm" name="confirm" onclick="confirmRegister(' + data.tempCollection[i]._id + ')" value="Enviar"><br>' +
+                                                            '<br><input type="button" class="delete" name="deleta" onclick="deleteRegister()"  value="Deletar"><br>' + 
                                                         '</div>' +
                                                     '</div>' + 
-                                                '</li>'+
-                                                '<br>');
+                                                '</li><br>');
                     }
                 }
             });
         })
+    </script>
+    <script>
+        function confirmRegister(idRegister) {
+            $('.confirm').on('click', function () {
+               var confirmation = confirm('Deseja inserir o registro desejado como permanente?');
+                if (confirmation == true) {
+                    var password = prompt("Insira a senha do administrador")
+                    $.ajax({
+                        url: 'upload/perm',
+                        type: 'POST',
+                        data: password, idRegister,
+                        processData: false,
+                        contentType: false,
+                        cache: false,
+                        success: function (data) {
+                            alert('Registro está como permanente!');
+                            $('#msg').html(data);
+                        }
+                    });
+                    return true;
+                } else {
+                    alert("Você desistiu de excluir o registro!");
+                    if (!confirmation) {
+                        return false
+                    }
+                }
+            });
+        }
+        function deleteRegister() {
+            $('.delete').on('click', function () {
+                var confirmacao = confirm('Deseja deletar o registro desejado?');
+                if (confirmacao) return true;
+                else alert("Você desistiu de excluir o registro!"); return false
+            });
+        }
     </script>
 </body>
 

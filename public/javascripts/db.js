@@ -54,6 +54,7 @@ class connectionClass {
       var docsId, doc, fileName = [];
 
       var numberDoc = await col.count({ isTemporary: true });
+      console.log(numberDoc);
       var tempCollection = await col.find({ isTemporary: true }).toArray();
       docsId = await col.find({ isTemporary: true }).project({ _id: 0, image_id: 1 }).toArray();
 
@@ -82,7 +83,22 @@ class connectionClass {
       console.log("Error with data: ", error);
     }
   }
-}
 
+  async findPassword(idRegister, password){
+    this.client = await client.connect();
+    console.log("Connected correctly to server");
+    const db = this.client.db(dbName);
+    const users = this.client.db(dbName).collection('users');
+    const registers = this.client.db(dbName).collection('registers');
+    var password = this.client.db(dbName).collection('users').count({'password': password});
+
+    if (passowrd == 1){
+      registers.updateOne({_id : idRegister}, {$set: {isTemporary: false}});
+      return true;
+    } else {
+      return false;  
+    }
+  }
+}
 module.exports = { connectionClass };
 
