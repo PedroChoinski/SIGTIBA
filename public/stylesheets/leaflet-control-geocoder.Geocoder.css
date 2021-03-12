@@ -46,7 +46,7 @@
 	height: 26px;
 	border: none;
 	background-color: white;
-	background-image: url(../images/geocoder.png);
+	background-image: url(../images/icons/geocoder.png);
 	background-repeat: no-repeat;
 	background-position: center;
 	cursor: pointer;
@@ -58,7 +58,7 @@
 }
 
 .leaflet-control-geocoder-throbber .leaflet-control-geocoder-icon {
-	background-image: url(../images/throbber.gif);
+	background-image: url(../images/icons/throbber.gif);
 }
 
 .leaflet-control-geocoder-form-no-error {

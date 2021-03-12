@@ -108,6 +108,7 @@
         }
         .leaflet-control-measure .leaflet-control-measure-interaction {
             background-color: #f8f8f8 !important;
+            z-index: 416;
         }
         .leaflet-touch .leaflet-control-measure
         .leaflet-control-measure-toggle,
