@@ -97,7 +97,7 @@
 .leaflet-pane         { z-index: 400; }
 
 .leaflet-tile-pane    { z-index: 200; }
-.leaflet-overlay-pane { z-index: 400; }
+.leaflet-overlay-pane { z-index: 416; }
 .leaflet-shadow-pane  { z-index: 500; }
 .leaflet-marker-pane  { z-index: 600; }
 .leaflet-tooltip-pane   { z-index: 650; }
@@ -182,6 +182,7 @@
 	-webkit-transform-origin: 0 0;
 	    -ms-transform-origin: 0 0;
 	        transform-origin: 0 0;
+			z-index: 416;
 	}
 .leaflet-zoom-anim .leaflet-zoom-animated {
 	will-change: transform;
@@ -207,6 +208,7 @@
 
 .leaflet-interactive {
 	cursor: pointer;
+	z-index: 417;
 	}
 .leaflet-grab {
 	cursor: -webkit-grab;
@@ -394,7 +396,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
 /* Default icon URLs */
 .leaflet-default-icon-path {
-	background-image: url(../images/marker-icon.png);
+	background-image: url(../images/icons/marker-icon.png);
 	}
 
 

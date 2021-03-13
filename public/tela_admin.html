@@ -13,6 +13,8 @@
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="stylesheets/style.css">
 
+    <link rel="icon" type="images/ico" href="images/icons/favicon.ico">
+
     <title>SIGTIBA</title>
 </head>
 
@@ -33,14 +35,14 @@
                     <a class="nav-link" href="urbanizacao.html">urbanização</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="login.html">admin</a>
+                    <a class="nav-link" href="login.html">registros pendentes</a>
                 </li>
             </ul>
         </div>
     </nav>
     <br>
 
-    <h2 class="under pd5px">Requisições usuários</h2><br>
+    <h2 class="under pd5px">Requisições pendentes dos usuários</h2><br>
 
     <ul class="list-group">
         <!-- <li class="list-group-item">
@@ -102,55 +104,19 @@
                                                             '</div>'+
                                                         '<div class="gallery col">' + 
                                                             '<div class="title">Dados do registro</div><br>' + 
-                                                            '<div class="type">Registro do tipo: '+ data.tempCollection[i].registro + '</div>' +
+                                                            '<div class="type">Tipo: '+ data.tempCollection[i].registro + '</div>' +
                                                             '<div class="desc">Descrição: ' + data.tempCollection[i].description + '</div>'+
                                                             '<div class="adress">Endereço: ' + data.tempCollection[i].adress + '</div>' +  
-                                                            '<div class="author">Achado por: ' + data.tempCollection[i].author + '</div>' +
-                                                             
-                                                            '<br><input type="button" class="confirm" name="confirm" onclick="confirmRegister(' + data.tempCollection[i]._id + ')" value="Enviar"><br>' +
-                                                            '<br><input type="button" class="delete" name="deleta" onclick="deleteRegister()"  value="Deletar"><br>' + 
+                                                            '<div class="author">Fonte/Autor: ' + data.tempCollection[i].author + '</div>' +
+                                                            '<div class="centralizar"><input type="submit" value="Enviar"></div><br>' +
                                                         '</div>' +
                                                     '</div>' + 
-                                                '</li><br>');
+                                                '</li>'+
+                                                '<br>');
                     }
                 }
             });
         })
-    </script>
-    <script>
-        function confirmRegister(idRegister) {
-            $('.confirm').on('click', function () {
-               var confirmation = confirm('Deseja inserir o registro desejado como permanente?');
-                if (confirmation == true) {
-                    var password = prompt("Insira a senha do administrador")
-                    $.ajax({
-                        url: 'upload/perm',
-                        type: 'POST',
-                        data: password, idRegister,
-                        processData: false,
-                        contentType: false,
-                        cache: false,
-                        success: function (data) {
-                            alert('Registro está como permanente!');
-                            $('#msg').html(data);
-                        }
-                    });
-                    return true;
-                } else {
-                    alert("Você desistiu de excluir o registro!");
-                    if (!confirmation) {
-                        return false
-                    }
-                }
-            });
-        }
-        function deleteRegister() {
-            $('.delete').on('click', function () {
-                var confirmacao = confirm('Deseja deletar o registro desejado?');
-                if (confirmacao) return true;
-                else alert("Você desistiu de excluir o registro!"); return false
-            });
-        }
     </script>
 </body>
 

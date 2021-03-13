@@ -5,6 +5,11 @@ nav {
   position: fixed;
 }
 
+.textinho {
+  font-size: 14px;
+  text-align: center;
+}
+
 #navbar-brand {
   padding: 10px;
   font-size: 20px;
@@ -70,80 +75,6 @@ h1{
     font-size: 26px;
     border-bottom: 4px solid rgba(55, 151, 97, 0.95);
     color: #404040;
-    text-align: center;
-  }
-
-  .mg15{
-    margin: 0% 3%;
-  }
-
-  .box{
-    margin: 0% 25%;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-  }
-
-  .box2{
-    margin: 0% 10%;
-    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
-	  z-index: 1001;
-    top:10%;
-    left: 20%;
-  }
-
-  .box3{
-    width: 500px;
-    margin: 0% 10%;
-    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
-    position: absolute;
-	  z-index: 1001;
-	  background-color: #ffffff;
-    top:10%;
-    border-radius: 5px;
-  }
-
-  .pd30{
-    padding: 0% 30%;
-  }
-
-  .pd10{
-    padding: 0% 10%;
-  }
-
-  .pd5px{
-    padding: 8px 15px;
-  }
-
-  .nav-item{
-    margin: 0 10px;
-  }
-
-  .centralizar{
-    text-align: center;
-  }
-
-  .esquerda{
-    text-align: left;
-  }
-
-  input[type=text], [type=password] {
-    border: 2px solid lightgrey;
-  }
-
-  input[type=button], input[type=submit], input[type=reset] {
-    background-color: rgba(55, 151, 97, 0.95);
-    border: none;
-    color: white;
-    padding: 5px 40px;
-    text-decoration: none;
-    cursor: pointer;
-  }
-
-  input[type="submit"]:hover {
-    background-color: rgba(51, 141, 90, 0.918)
-}
-  
-.verdinho{
-  color: rgba(46,139,87, 0.95);
 }
 
 h2{
@@ -152,9 +83,89 @@ h2{
   text-align: center;
 }
 
+.mg15{
+  margin: 0% 3%;
+}
+
+.box{
+  margin: 0% 25%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.box2{
+  margin: 0% 10%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.1);
+  z-index: 1001;
+  top:10%;
+  left: 20%;
+}
+
+.box3{
+  width: 500px;
+  margin: 0% 10%;
+  box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.4);
+  position: fixed;
+  z-index: 1001;
+  background-color: #ffffff;
+  top:10%;
+  border-radius: 5px;
+}
+
+.pd30{
+  padding: 0% 30%;
+}
+
+.pd10{
+  padding: 0% 10%;
+}
+
+.pd5px{
+  padding: 8px 15px;
+}
+
+.nav-item{
+  margin: 0 10px;
+}
+
+.centralizar{
+  text-align: center;
+}
+
+.esquerda{
+  text-align: left;
+}
+
+input[type=text], [type=password] {
+  border: 2px solid lightgrey;
+}
+
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: rgba(55, 151, 97, 0.95);
+  border: none;
+  color: white;
+  padding: 5px 40px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: rgba(51, 141, 90, 0.918)
+}
+
+.verdinho{
+color: rgba(46,139,87, 0.95);
+}
+
+div.gallery {
+margin: 5px;
+box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+float: left;
+width: 370px;
+}
+
 div.reqs_content {
-  margin: 0px 10%;
-  float: left;
+margin: 0px 10%;
+float: left;
 }
 
 div.gallery:hover {
@@ -203,11 +214,8 @@ margin: 80px;
 }
 
 input.altura_desc {
-  height: 120px;
+height: 120px;
 }
-
-
-
 
 .btnData {
 width: 100px;
@@ -250,7 +258,6 @@ background-color: rgb(255, 255, 255);
 border-bottom: 4px solid rgba(55, 151, 97, 0.95);
 }
 
-
 .bg {
   background-position: center;
   background-repeat: no-repeat;
@@ -273,5 +280,4 @@ border-bottom: 4px solid rgba(55, 151, 97, 0.95);
 .img {
   object-fit: cover;
 }
-
 
