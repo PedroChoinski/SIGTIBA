@@ -163,6 +163,12 @@ float: left;
 width: 370px;
 }
 
+div.gallery1 {
+margin: 5px;
+box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+float: left;
+}
+
 div.reqs_content {
 margin: 0px 10%;
 float: left;
@@ -201,6 +207,13 @@ padding: 7px;
 text-align: center;
 font-weight: bold;
 border-bottom: 4px solid rgba(55, 151, 97, 0.95);
+color: #404040;
+}
+
+div.title1 {
+padding: 7px;
+text-align: center;
+font-weight: bold;
 color: #404040;
 }
 
