@@ -135,6 +135,10 @@ h2{
   text-align: left;
 }
 
+.direita{
+  text-align: right;
+}
+
 input[type=text], [type=password] {
   border: 2px solid lightgrey;
 }
