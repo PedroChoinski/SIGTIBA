@@ -4,12 +4,6 @@
     box-sizing: border-box;
   }
   
-  /* Set a background color */
-  body {
-    background-color: #ffffff;
-    font-family: Helvetica, sans-serif;
-  }
-  
   /* The actual timeline (the vertical ruler) */
   .timeline {
     position: relative;
@@ -133,10 +127,4 @@
     .right {
       left: 0%;
     }
-  }
-  nav {
-    background-color: rgba(46,139,87, 0.95);
-    height: 60px;
-    color: black;
-    position: fixed;
   }
