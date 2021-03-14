@@ -57,13 +57,10 @@ router.post('/javascripts/db.js', function (req, res, next) {
 
 router.post('/images/photos', upload.single('image'), function (req, res, next) {
   var register = req.body;
-  console.log(register);
 
   var dateSplit = register['date'].split('-');
-  var dateType = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
-  register['date'] = dateType;
   register = JSON.parse(JSON.stringify(Object.assign(register, { image_id: req.file['id'], isTemporary: true })));;
-  console.log(register);
+  register['date'] = new Date(dateSplit[0], dateSplit[1] - 1, dateSplit[2]);
 
   db.insertTempRegister(register).then(function (result) {
     console.log('Registro salvo!')

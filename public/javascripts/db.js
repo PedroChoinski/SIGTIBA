@@ -41,7 +41,7 @@ class connectionClass {
 
 
   //find temporary registers (text) and the number of docs
-  async findTempRegister(register) {
+  async findTempRegister() {
     try {
       this.client = await client.connect();
       console.log("Connected correctly to server");
@@ -79,6 +79,7 @@ class connectionClass {
         numberDoc: numberDoc,
         fileName: fileName
       }
+
     } catch (error) {
       console.log("Error with data: ", error);
     }
