@@ -100,26 +100,14 @@
                                                     '<div class="bg"> '+
                                                         '<div class="gallery">'+
                                                             '<div class="title">Foto do registro</div><br>' +
-                                                            
-                                                            '<img class="img" name="img" src="images/photos/'+ data.fileName[i] + ' " loading="eager"  alt ="foto '+ i +'">' +
-                                                            '<input type="hidden" name="img" value="images/photos/'+ data.fileName[i] + '">' +
-                                                            
+                                                            '<img class="img" src="images/photos/'+ data.fileName[i] + ' " loading="eager"  alt ="foto '+ i +'">' +
                                                             '</div>'+
                                                         '<div class="gallery col">' + 
                                                             '<div class="title">Dados do registro</div><br>' + 
-                                                            
-                                                            '<div class="type">Tipo: '+ data.tempCollection[i].type + '</div>' +
-                                                            '<input type="hidden" name="type-register" value="'+data.tempCollection[i].type + '">' +
-                                                            
+                                                            '<div class="type">Tipo: '+ data.tempCollection[i].registro + '</div>' +
                                                             '<div class="desc">Descrição: ' + data.tempCollection[i].description + '</div>'+
-                                                            '<input type="hidden" name"description" value="' + data.tempCollection[i].descricao + '">'+
-                                                            
                                                             '<div class="adress">Endereço: ' + data.tempCollection[i].adress + '</div>' +  
-                                                            '<input type="hidden" name="adress" value="'+ data.tempCollection[i].adress +' ">' +
-
                                                             '<div class="author">Fonte/Autor: ' + data.tempCollection[i].author + '</div>' +
-                                                            '<input type="hidden" name="author" value="' + data.tempCollection[i].author + '">' +
-                                                            
                                                             '<div class="centralizar"><input type="submit" value="Enviar"></div><br>' +
                                                         '</div>' +
                                                     '</div>' + 
