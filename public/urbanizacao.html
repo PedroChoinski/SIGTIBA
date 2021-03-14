@@ -43,7 +43,6 @@
     </nav>
 
     <button class="btnData1" onclick="openForm()" onMouseOver="this.style.color='whitesmoke'" onMouseOut="this.style.color='#202020'" style="background-color: rgba(46,139,87, 0.95);">Adicionar novo registro</button>
-    <input type="file" style="display:none" id="file-input" accept="image/*" oninput="create()" />
 
     <div class="box3" id="box3" style="display: none">
         <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
@@ -88,7 +87,7 @@
             <input type="date" id="date" name="date" size="46em" style="margin-bottom: 15px"><br>
             
             <label for="fname">Imagem</label><br>
-            <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px"><br>
+            <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px" accept="image/*"><br>
 
             <div class="centralizar"><input type="submit" value="Enviar"></div><br>
         </form>
