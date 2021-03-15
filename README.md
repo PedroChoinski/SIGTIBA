@@ -29,7 +29,7 @@
 ````Bootstrap 5.0````
 ````SO: Windows 10````
 ````Node.js 14.16.0````
-````MongoDB````
+````MongoDB Community 4.4.4````
 
 ## 💻 Instalações e Configurações Necessárias
 
