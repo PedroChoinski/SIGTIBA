@@ -98,7 +98,7 @@
             <input type="text" id="adress" name="adress" size="46em" style="margin-bottom: 15px"><br>
 
             <label for="fname">Coordenadas</label><br>
-            <input type="text" id="coord" name="coord" size="46em" placeholder="XX.XXXXX, XX.XXXXX" pattern="[0-9]{2}.[0-9]{3} [0-9]{2}.[0-9]{3}" ><br>
+            <input type="text" id="coord" name="coord" size="46em" placeholder="XX.XXXXX, XX.XXXXX" pattern="[0-9]{2}.[0-9]{5}, [0-9]{2}.[0-9]{5}" ><br>
 	        <span class="textinho verdinho" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
             <br>
 
@@ -116,9 +116,34 @@
             <span class="textinho verdinho" style="margin-bottom: 30px">A foto deve ser JPEG e ter largura exata de 300px</span>
             <br>
 
-            <div class="centralizar"><input type="submit" value="Enviar"></div><br>
+            <div class="centralizar"><input type="submit" value="Enviar" onclick="verify()"></div><br>
         </form>
     </div>
+
+    <script>
+        function verify(){
+            var adressver = document.getElementById("adress").value
+            var coordver = document.getElementById("coord").value
+            var descriptionver = document.getElementById("description").value
+            var authorver = document.getElementById("author").value
+            var datever = document.getElementById("date").value
+            if (adressver == "" || adressver == null || adressver.length < 10) {
+				alert("O endereço precisa ter pelo menos 10 caracteres.");
+            } else if (coordver == "" || coordver == null){
+                alert("Por favor, insira uma coordenada válida.");
+            } else if (descriptionver == "" ||
+				descriptionver == null ||
+				descriptionver.length < 15) {
+				alert("A descrição precisa ter pelo menos 15 caracteres ");
+			} else if (authorver == "" || authorver == null || authorver.length < 3){
+                alert("O autor/fonte precisa ter pelo menos 3 caracteres");
+            } else if(datever == null || datever == ""){
+                alert("Por favor, insira uma data");
+            } 
+        }
+    
+    </script>
+
     <script>
         $("#mg15").submit(function () {
             var formData = new FormData(this);
