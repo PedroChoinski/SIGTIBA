@@ -1,6 +1,5 @@
 const { MongoClient } = require("mongodb");
 const mongodb = require('mongodb');
-const user = require("../../routes/users");
 const url = "mongodb+srv://telles:R4r3tVkJCAckQy@cluster0.q2lss.mongodb.net/db_sigtiba?retryWrites=true&w=majority";
 const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology: true });
 dbName = "db_sigtiba";
@@ -14,6 +13,7 @@ class connectionClass {
     try {
       this.client = await client.connect();
       console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
 
       const collection = this.client.db(dbName).collection('users');
       const response = await collection.insertOne(user);
@@ -23,7 +23,6 @@ class connectionClass {
       console.log(error);
     }
   }
-
 
   //create temporary register
   async insertTempRegister(register) {
@@ -39,7 +38,6 @@ class connectionClass {
     }
   }
 
-
   //find temporary registers (text) and the number of docs
   async findTempRegister() {
     try {
@@ -54,7 +52,6 @@ class connectionClass {
       var docsId, doc, fileName = [];
 
       var numberDoc = await col.count({ isTemporary: true });
-      console.log(numberDoc);
       var tempCollection = await col.find({ isTemporary: true }).toArray();
       docsId = await col.find({ isTemporary: true }).project({ _id: 0, image_id: 1 }).toArray();
 
@@ -74,27 +71,111 @@ class connectionClass {
           });
         fileName = fileName;
       }
-      var passwords = await this.findPassword();
       return doc = {
         tempCollection: tempCollection,
         numberDoc: numberDoc,
-        fileName: fileName,
-        passwords: passwords
+        fileName: fileName
       }
 
     } catch (error) {
       console.log("Error with data: ", error);
     }
   }
+  async findHistoricalRegister() {
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      const col = this.client.db(dbName).collection('registers');
+      const photos = this.client.db(dbName).collection('photos.files');
+      const bucket = new mongodb.GridFSBucket(db, {
+        bucketName: 'photos'
+      });
+      var doc;
+      var fileName = [];
+      var query = {type: "Histórico", isTemporary: false}
+      var numberDoc = await col.count(query);
+      var historicalCollection = await col.find(query).toArray();
+      var fileId = await col.distinct('image_id', query);
+      console.log(fileId);
+      for (var i = 0; i < numberDoc; i++) {
+        fileName[i] = (await photos.distinct('filename', {_id: ObjectId(fileId[i])})).toString();
+        console.log(fileName[i]);
+        bucket.openDownloadStreamByName(fileName[i])
+          .pipe(fs.createWriteStream("./public/images/photos/" + fileName[i]))
+          .on('error', function (error) {
+            assert.ifError(error);
+          }).on('end', function (img) {
+            process.exit(0);
+          });
+      }
+      return doc = {
+        historicalCollection: historicalCollection,
+        numberDoc: numberDoc,
+        fileName: fileName
+      }
+    } catch (error) {
+      console.log("Error with data: ", error);
+    }
+  }
+  async deleteRegister(id) {
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      const bucket = new mongodb.GridFSBucket(db, {
+        bucketName: 'photos'
+      });
+      var fileId;
+      var idRegister = ObjectId(id);
+      var queryId = { _id: idRegister };
+      const fieldName = "image_id";
+      const registers = this.client.db(dbName).collection('registers');
+      fileId = (await registers.distinct(fieldName, queryId)).toString();
+      await registers.deleteOne({ _id: idRegister }).then(function (result) {
+        console.log('Registro deletado!');
+      }, (error) => console.log(error));
+      await bucket.delete(ObjectId(fileId)).then(function (result) {
+        console.log('Imagem deletada! ');
+      }, (error) => console.log(error));
+      this.client.close();
+    } catch (error) {
+      console.log(error);
+    }
+  }
 
+  async updateRegister(id) {
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      var idRegister = ObjectId(id);
+      var query = { _id: idRegister };
+      db.collection('registers').updateOne(query, { $set: { isTemporary: false } }, function (err, res) {
+        if (err) throw err;
+        console.log("1 document updated");
+      });
+
+      this.client.close();
+    } catch (error) {
+      console.log(error);
+    }
+  }
   async findPassword() {
-    this.client = await client.connect();
-    console.log("Connected correctly to server");
-    const db = this.client.db(dbName);
-    const users = this.client.db(dbName).collection('users');
-    var password = await this.client.db(dbName).collection('users').find().project({_id : 0, password : 1}).toArray();
-    return password;
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      var password = [];
+      await this.client.db(dbName).collection('users').find().forEach(function (document) { password.push(document.password) })
+      console.log(password);
+
+      return password;
+    } catch (error) {
+      console.log("Error with data: ", error);
+    }
   };
+
 }
 module.exports = { connectionClass };
 

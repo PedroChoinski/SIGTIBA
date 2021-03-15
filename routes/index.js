@@ -75,25 +75,45 @@ router.post('/images/photos', upload.single('image'), function (req, res, next) 
 
 router.post('/tela_admin.html', function (req, res, next) {
   db.findTempRegister().then(function (doc) {
-    console.log(doc.passwords);
     res.send({
       tempCollection: doc.tempCollection,
       numberDoc: doc.numberDoc,
       fileName: doc.fileName,
-      passwords: doc.passwords,
       success: true
     });
   })
 
 })
 
-router.post('/upload/perm', function (req, res, next) {
-  var register = req.body;
-  var id = register['idRegister'];
-  var password = register['password']
-  db.findPassword(idRegister, password).then(function (result) {
-    res.send({success: result});
+router.post('/registers/update', function (req, res, next) {
+  var id = req.body.id;
+  db.updateRegister(id).then(() => res.send({ success: true }));
+});
+
+router.post('/delete', function (req, res, next) {
+  var idRegister = req.body.id;
+  console.log('id do registro: ' + idRegister);
+  db.deleteRegister(idRegister).then(() => res.send({ success: true }))
+});
+
+router.post('/passwords', function (req, res, next) {
+  db.findPassword().then(function (password) {
+    res.send({
+      password: password,
+      success: true
+    });
   });
+});
+
+router.post('/urbanizacao.html', function (req, res, next) {
+  db.findHistoricalRegister().then(function (doc) {
+    res.send({
+      historicalCollection: doc.historicalCollection,
+      numberDoc: doc.numberDoc,
+      fileName: doc.fileName,
+      success: true
+    });
+  })
 });
 
 module.exports = router;
