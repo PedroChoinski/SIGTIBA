@@ -269,6 +269,14 @@ input.altura_desc {
 height: 120px;
 }
 
+.coord {
+  text-align: center;
+}
+
+.adress {
+  text-align: center;
+}
+
 .btnData1 {
 height: 50px;
 padding: 10px;
