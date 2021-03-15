@@ -52,7 +52,6 @@ class connectionClass {
       var docsId, doc, fileName = [];
 
       var numberDoc = await col.count({ isTemporary: true });
-      console.log(numberDoc);
       var tempCollection = await col.find({ isTemporary: true }).toArray();
       docsId = await col.find({ isTemporary: true }).project({ _id: 0, image_id: 1 }).toArray();
 
@@ -82,7 +81,43 @@ class connectionClass {
       console.log("Error with data: ", error);
     }
   }
-
+  async findHistoricalRegister() {
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      const col = this.client.db(dbName).collection('registers');
+      const photos = this.client.db(dbName).collection('photos.files');
+      const bucket = new mongodb.GridFSBucket(db, {
+        bucketName: 'photos'
+      });
+      var doc;
+      var fileName = [];
+      var query = {type: "Histórico", isTemporary: false}
+      var numberDoc = await col.count(query);
+      var historicalCollection = await col.find(query).toArray();
+      var fileId = await col.distinct('image_id', query);
+      console.log(fileId);
+      for (var i = 0; i < numberDoc; i++) {
+        fileName[i] = (await photos.distinct('filename', {_id: ObjectId(fileId[i])})).toString();
+        console.log(fileName[i]);
+        bucket.openDownloadStreamByName(fileName[i])
+          .pipe(fs.createWriteStream("./public/images/photos/" + fileName[i]))
+          .on('error', function (error) {
+            assert.ifError(error);
+          }).on('end', function (img) {
+            process.exit(0);
+          });
+      }
+      return doc = {
+        historicalCollection: historicalCollection,
+        numberDoc: numberDoc,
+        fileName: fileName
+      }
+    } catch (error) {
+      console.log("Error with data: ", error);
+    }
+  }
   async deleteRegister(id) {
     try {
       this.client = await client.connect();
@@ -93,11 +128,11 @@ class connectionClass {
       });
       var fileId;
       var idRegister = ObjectId(id);
-      var queryId = {_id : idRegister};
+      var queryId = { _id: idRegister };
       const fieldName = "image_id";
       const registers = this.client.db(dbName).collection('registers');
       fileId = (await registers.distinct(fieldName, queryId)).toString();
-      await registers.deleteOne({_id : idRegister}).then(function(result){
+      await registers.deleteOne({ _id: idRegister }).then(function (result) {
         console.log('Registro deletado!');
       }, (error) => console.log(error));
       await bucket.delete(ObjectId(fileId)).then(function (result) {
@@ -115,9 +150,9 @@ class connectionClass {
       console.log("Connected correctly to server");
       const db = this.client.db(dbName);
       var idRegister = ObjectId(id);
-      var query = {_id: idRegister};
-      db.collection('registers').updateOne(query,  { $set: {isTemporary: false}}, function(err, res){
-        if(err) throw err;
+      var query = { _id: idRegister };
+      db.collection('registers').updateOne(query, { $set: { isTemporary: false } }, function (err, res) {
+        if (err) throw err;
         console.log("1 document updated");
       });
 

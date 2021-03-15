@@ -276,81 +276,46 @@
     <br>
     <h2><b>Memorial Fotográfico</b></h2>
     <br>
-
+   
     <div class="pd10 row">
-            <div class="gallery">
+            <!-- <div class="gallery">
                 <a target="" href="">
                 <img src="images/photos/1930_ufpr.jpg" alt="foto 1">
                 </a>
                 <div class="title">Titulo registro</div>
                 <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
                 <div class="author">Autor tal ano tal</div>
-            </div>
-            
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/1920_ufpr.jpg" alt="foto 2">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-            
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/1930_sla.jpg" alt="foto 3">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-            
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/1910_tiradentes.jpg" alt="foto 4">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/ferroviaria_1900.jpg" alt="foto 5">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/couto_pereira_1950.jpg" alt="foto 3">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-            
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/1910_tiradentes.jpg" alt="foto 4">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
-
-            <div class="gallery">
-                <a target="" href="">
-                <img src="images/photos/1930_sla.jpg" alt="foto 5">
-                </a>
-                <div class="title">Titulo registro</div>
-                <div class="desc">descricao descricao descricao descricao descricao descricao descricao</div>
-                <div class="author">Autor tal ano tal</div>
-            </div>
+            </div> -->
     </div>
-    
+    <script>
+        $(document).ready(function (data) {
+            $.ajax({
+                url: '/urbanizacao.html',
+                type: 'POST',
+                dataType: 'JSON',
+                processData: false,
+                contentType: false,
+                cache: false,
+                success: function (data) {
+                    alert('Mural histórico montado!');
+                    for (var i = 0; i < data.numberDoc; i++) {
+                        
+                        var date = new Date(data.historicalCollection[i].date);
+                        $('.pd10').append('<div class="gallery">'+
+                                                    '<a target="" href="">'+
+                                                    '<img src="images/photos/'+ data.fileName[i] + '" alt="foto '+i+'">'+
+                                                    '</a>'+
+                                                    '<div class="title">'+ Intl.DateTimeFormat('pt-BR').format(date) +'</div>'+
+                                                    '<div class="desc">'+ data.historicalCollection[i].description +'</div>'+
+                                                    '<div class="author">Fonte:' + data.historicalCollection[i].author + '</div>' +
+                                                '</div>'
+                        );
+                        
+                    }
+                }
+            });
+        });
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"

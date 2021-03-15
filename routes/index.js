@@ -92,9 +92,7 @@ router.post('/registers/update', function (req, res, next) {
 
 router.post('/delete', function (req, res, next) {
   var idRegister = req.body.id;
-
   console.log('id do registro: ' + idRegister);
-  
   db.deleteRegister(idRegister).then(() => res.send({ success: true }))
 });
 
@@ -106,5 +104,17 @@ router.post('/passwords', function (req, res, next) {
     });
   });
 });
+
+router.post('/urbanizacao.html', function (req, res, next) {
+  db.findHistoricalRegister().then(function (doc) {
+    res.send({
+      historicalCollection: doc.historicalCollection,
+      numberDoc: doc.numberDoc,
+      fileName: doc.fileName,
+      success: true
+    });
+  })
+});
+
 module.exports = router;
 
