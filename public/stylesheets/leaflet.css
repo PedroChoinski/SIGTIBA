@@ -51,7 +51,7 @@
 .leaflet-container .leaflet-tile-pane img,
 .leaflet-container img.leaflet-image-layer,
 .leaflet-container .leaflet-tile {
-	width: 300px !important;
+	max-width: none !important;
 	max-height: none !important;
 	}
 
