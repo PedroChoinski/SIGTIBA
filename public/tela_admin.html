@@ -115,8 +115,8 @@
                                           
                           '<form class="inline-block" id="formRegister">'+
                             '<div class="centralizar" name="delete">'+
-                              '<input type="submit" class="deleteButton" style="margin-right: 15px; background-color: #ff5148;" name="deleteButton" value="Deletar">'+
-                              '<input type="submit" name="permanentButton" style="margin-left: 15px" value="Enviar">' +
+                              '<input type="button" class="deleteButton" style="margin-right: 15px; background-color: #ff5148;" name="deleteButton" value="Deletar" onclick="deleteRegister()">'+
+                              '<input type="button" name="permanentButton" style="margin-left: 15px" value="Enviar" onclick="setPermanent()">' +
 
                             '</div><br>'+
                             '<input type="hidden" name="id" value="'+  data.tempCollection[i]._id +'">' +
@@ -128,6 +128,42 @@
         }
       });
     })
+
+  </script>
+  <div class="box3" id="box3" style="display: none">
+    <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
+    <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 26px; padding-top: 0px">Login</h1><br>
+    <form class="mg15" id="mg15" style="display: none">
+      <br>
+
+      <label for="fname">Login</label><br>
+      <input type="login" id="login" name="login" size="46em" style="margin-bottom: 15px"><br>
+
+      <label for="fname">Senha</label><br>
+      <input type="password" id="pass" name="pass" size="46em"><br>
+        
+      <div class="centralizar"><input type="submit" value="Entrar"></div><br><br>
+    </form>
+  </div>
+  <div class="box4" id="box4" style="display: none">
+    <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 26px; padding-top: 0px">Excluir?</h1><br>
+    <form class="mg15" id="deleteForm" style="display: none">
+      <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
+      <br>
+      <label for="fname">Tem certeza que deseja excluir esse registro? Essa ação durará para sempre (muito tempo!)</label><br>
+
+      <label for="fname">Senha</label><br>
+      <input type="password" id="pass" name="pass" size="46em"><br>
+      <br>
+      <div class="centralizar"><input type="submit" onclick="verifyPass()" style="background-color: #ff5148" value="Excluir"></div><br><br>
+    </form>
+  </div>
+  <script>
+    function deleteRegister(){
+      document.getElementById("box4").style.display = 'block';
+      document.getElementById("deleteForm").style.display = 'block';
+    };
+    $('.')
   </script>
 </body>
 
