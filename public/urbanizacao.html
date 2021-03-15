@@ -46,9 +46,12 @@
 
     <div class="box3" id="box3" style="display: none">
         
-        <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 26px; padding-top: 0px">Adicionar registro</h1><br>
         <form class="mg15" id="mg15" style="display: none">
-            <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
+            
+            <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 30px; border-radius: 0px 0px 30px 30px; float: right;padding-top: 10px" onclick="closeForm()">X</button><br>
+
+            <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 30px; margin-bottom: 5px">Adicionar registro</h2>
+
             <span class="textinho verdinho" style="margin-bottom: 15px; text-align: center;">Insira as informações da maneira mais completa possível, e observe as exigências de cada item, para que seu registro seja aceito</span>
             <br>
 
@@ -88,8 +91,7 @@
             
             <label for="fname">Imagem</label><br>
             <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px" accept="image/*"><br>
-            <span class="textinho verdinho" style="margin-bottom: 30px">A foto deve ser JPEG e ter largura exata de 300px</span>
-            <br>
+
             <div class="centralizar"><input type="submit" value="Enviar" onclick="verify()"></div><br>
         </form>
     </div>
