@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var db = require("../public/javascripts/db")
 var path = require('path');
+const _db = require("../public/javascripts/db");
+const db = new _db.connectionClass;
 
 /* GET users listing. */
 router.get('/', function (req, res, next) {

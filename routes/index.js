@@ -75,12 +75,10 @@ router.post('/images/photos', upload.single('image'), function (req, res, next) 
 
 router.post('/tela_admin.html', function (req, res, next) {
   db.findTempRegister().then(function (doc) {
-    console.log(doc.passwords);
     res.send({
       tempCollection: doc.tempCollection,
       numberDoc: doc.numberDoc,
       fileName: doc.fileName,
-      passwords: doc.passwords,
       success: true
     });
   })
@@ -92,9 +90,25 @@ router.post('/upload/perm', function (req, res, next) {
   var id = register['idRegister'];
   var password = register['password']
   db.findPassword(idRegister, password).then(function (result) {
-    res.send({success: result});
+    res.send({ success: result });
   });
 });
 
+router.post('/delete', function (req, res, next) {
+  var idRegister = req.body.id;
+
+  console.log('id do registro: ' + idRegister);
+  
+  db.deleteRegister(idRegister).then(() => res.send({ success: true }))
+});
+
+router.post('/passwords', function (req, res, next) {
+  db.findPassword().then(function (password) {
+    res.send({
+      password: password,
+      success: true
+    });
+  });
+});
 module.exports = router;
 

@@ -84,7 +84,6 @@
   </ul>
   <script>
     $(document).ready(function (data) {
-      var formData;
       $.ajax({
         url: '/tela_admin.html',
         type: 'POST',
@@ -98,7 +97,7 @@
             var date = new Date(data.tempCollection[i].date);
 
             $('.list-group')
-            .append('<li class="list-group-item">' +
+            .append('<li class="list-group-item" id ="'+ data.tempCollection[i]._id +'">' +
                       '<div class="bg"> '+
                         '<div class="gallery">'+
                           '<div class="title">Foto do registro</div><br>' +
@@ -116,11 +115,10 @@
                                           
                           '<form class="inline-block" id="formRegister">'+
                             '<div class="centralizar" name="delete">'+
-                              '<input type="button" class="deleteButton" style="margin-right: 15px; background-color: #ff5148;" name="deleteButton" value="Deletar" onclick="deleteRegister()">'+
-                              '<input type="button" name="permanentButton" style="margin-left: 15px" value="Enviar" onclick="setPermanent()">' +
+                              '<input type="button" class="deleteButton" style="margin-right: 15px; background-color: #ff5148;" name="deleteButton" value="Deletar" onclick="deleteRegister(\'' + data.tempCollection[i]._id + '\')">'+
+                              '<input type="button" name="permanentButton" style="margin-left: 15px" value="Enviar" onclick="setPermanent(\'' + data.tempCollection[i]._id+ '\')">' +
 
                             '</div><br>'+
-                            '<input type="hidden" name="id" value="'+  data.tempCollection[i]._id +'">' +
                           '</form>' +
                         '</div>' +
                       '</div>' + 
@@ -146,25 +144,74 @@
       <div class="centralizar"><input type="submit" value="Entrar"></div><br><br>
     </form>
   </div>
+
   <div class="box4" id="box4" style="display: none">
+    <button style="background-color: rgba(46,139,87, 0.95); float:right; border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
     <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 26px; padding-top: 0px">Excluir?</h1><br>
     <form class="mg15" id="deleteForm" style="display: none">
-      <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 35px; border-radius: 4px 0px 0px 0px;" onclick="closeForm()">X</button>
       <br>
-      <label for="fname">Tem certeza que deseja excluir esse registro? Essa ação durará para sempre (muito tempo!)</label><br>
+      <label for="fname">Tem certeza que deseja excluir esse registro?<br>Essa ação durará para sempre (muito tempo!)</label><br>
 
-      <label for="fname">Senha</label><br>
-      <input type="password" id="pass" name="pass" size="46em"><br>
+      <label for="fname">Senha:</label><br>
+      <input type="password" id="passDelete" name="password" size="46em" required="required"><br>
       <br>
-      <div class="centralizar"><input type="submit" onclick="verifyPass()" style="background-color: #ff5148" value="Excluir"></div><br><br>
+      <div class="centralizar"><input type="submit" id="submit" style="background-color: #ff5148" value="Confirmar exclusão"></div><br><br>
     </form>
   </div>
-  <script>
-    function deleteRegister(){
+  <script>    
+    function deleteRegister(id){
+      if ($('#idRegister').length === 0) $('#deleteForm').append('<input type="text" id="idRegister" value="'+ id +'">');
+      else document.getElementById("idRegister").value = id;
       document.getElementById("box4").style.display = 'block';
       document.getElementById("deleteForm").style.display = 'block';
-    };
-    $('.')
+    }
+
+    function closeForm(){
+      document.getElementById("deleteForm").reset();
+      document.getElementById("box4").style.display = 'none';
+      document.getElementById("deleteForm").style.display = 'none';
+    }
+    
+    $("#deleteForm").submit(function(e) {
+      e.preventDefault();
+      var pass = document.getElementById('passDelete').value;
+      var id = document.getElementById('idRegister').value;
+      var cardRegister = document.getElementById(id);
+      var data = {'id' : id}; 
+
+      $.ajax({
+        url: '/passwords',
+        type: 'POST',
+        success:function (passwords){
+          var isValid = false;
+          for(var i = 0; i < passwords.password.length; i++){
+            if (pass == passwords.password[i]){
+              isValid = true;
+            };
+          }
+          if(isValid) {
+            $.ajax({
+              url: '/delete',
+              type: 'POST',
+              dataType: 'JSON',
+              data: data,
+              success:function (){
+                alert('Registro deletado com sucesso!');
+                closeForm();
+                while (cardRegister.hasChildNodes()) {
+                  cardRegister.removeChild(cardRegister.lastChild);
+                  cardRegister.remove();
+                }
+              }
+            });
+          } else {
+            alert('Insira uma senha válida!');
+          }
+        }
+      });
+      return false;
+    })
+    
   </script>
 </body>
 
