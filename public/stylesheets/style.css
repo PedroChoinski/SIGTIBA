@@ -385,9 +385,9 @@ border-bottom: 4px solid rgba(55, 151, 97, 0.95);
   width: 0;
   z-index: 1;
   right: 30px;
-  border: medium solid white;
+  border: medium solid rgba(46,139,87, 0.95);
   border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
+  border-color: transparent transparent transparent rgba(46,139,87, 0.95);
 }
 
 /* Add arrows to the right container (pointing left) */
@@ -399,9 +399,9 @@ border-bottom: 4px solid rgba(55, 151, 97, 0.95);
   width: 0;
   z-index: 1;
   left: 30px;
-  border: medium solid white;
+  border: medium solid rgba(46,139,87, 0.95);
   border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
+  border-color: transparent rgba(46,139,87, 0.95) transparent transparent;
 }
 
 /* Fix the circle for containers on the right side */
