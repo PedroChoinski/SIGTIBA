@@ -72,6 +72,7 @@
     <div class="box3" id="box3" style="display: none">
         
         <form class="mg15" id="mg15" style="display: none">
+            
             <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 30px; border-radius: 0px 0px 30px 30px; float: right;padding-top: 10px" onclick="closeForm()">X</button><br>
 
             <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 30px; margin-bottom: 5px">Adicionar registro</h2>
@@ -115,6 +116,7 @@
             
             <label for="fname">Imagem</label><br>
             <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px" accept="image/*"><br>
+            <span class="textinho verdinho" style="margin-bottom: 30px">A foto precisa ter largura exata de 300px.</span>   
 
             <div class="centralizar"><input type="submit" value="Enviar" onclick="verify()"></div><br>
         </form>
@@ -1067,7 +1069,7 @@
                         <td colspan="2"><img src = "' + (feature.properties['RelPath']) + '">  </td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2"><strong>Data:</strong><br />' + (feature.properties['Date'] !== null ? autolinker.link(feature.properties['Date'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2"><strong>Data Aproximada da Foto:</strong><br />' + (feature.properties['Date'] !== null ? autolinker.link(feature.properties['Date'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Categoria do Registro:</strong><br />' + (feature.properties['categoria'] !== null ? autolinker.link(feature.properties['categoria'].toLocaleString()) : '') + '</td>\
@@ -1080,9 +1082,6 @@
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Endereço:</strong><br />' + (feature.properties['endereco'] !== null ? autolinker.link(feature.properties['endereco'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
-                        <td colspan="2"><strong>Ano da Foto:</strong><br />' + (feature.properties['ano_foto'] !== null ? autolinker.link(feature.properties['ano_foto'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
                         <td colspan="2"><strong>Fonte ou Autor:</strong><br />' + (feature.properties['fonte'] !== null ? autolinker.link(feature.properties['fonte'].toLocaleString()) : '') + '</td>\
