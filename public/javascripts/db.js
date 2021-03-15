@@ -64,20 +64,22 @@ class connectionClass {
         var idSingleDoc = (docsSplitted[3]);
         var fileNamesObj = await bucket.find(ObjectId(idSingleDoc)).project({ _id: 1, filename: 1 }).toArray();
         var fileNamesSplitted = (JSON.stringify(fileNamesObj)).split('"');
-        fileName[i] = fileNamesSplitted[7]; 
+        fileName[i] = fileNamesSplitted[7];
         bucket.openDownloadStreamByName(fileName[i])
-        .pipe(fs.createWriteStream("./public/images/photos/" + fileName[i]))
-        .on('error', function (error) {
-          assert.ifError(error);
-        }).on('end', function (img) {
-          process.exit(0);
-        }); 
+          .pipe(fs.createWriteStream("./public/images/photos/" + fileName[i]))
+          .on('error', function (error) {
+            assert.ifError(error);
+          }).on('end', function (img) {
+            process.exit(0);
+          });
         fileName = fileName;
       }
+      var passwords = await this.findPassword();
       return doc = {
         tempCollection: tempCollection,
         numberDoc: numberDoc,
-        fileName: fileName
+        fileName: fileName,
+        passwords: passwords
       }
 
     } catch (error) {
@@ -85,21 +87,14 @@ class connectionClass {
     }
   }
 
-  async findPassword(idRegister, password){
+  async findPassword() {
     this.client = await client.connect();
     console.log("Connected correctly to server");
     const db = this.client.db(dbName);
     const users = this.client.db(dbName).collection('users');
-    const registers = this.client.db(dbName).collection('registers');
-    var password = this.client.db(dbName).collection('users').count({'password': password});
-
-    if (passowrd == 1){
-      registers.updateOne({_id : idRegister}, {$set: {isTemporary: false}});
-      return true;
-    } else {
-      return false;  
-    }
-  }
+    var password = await this.client.db(dbName).collection('users').find().project({_id : 0, password : 1}).toArray();
+    return password;
+  };
 }
 module.exports = { connectionClass };
 

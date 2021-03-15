@@ -42,7 +42,7 @@
   </nav>
   <br>
 
-  <h2 class="under pd5px">Requisições pendentes dos usuários</h2><br>
+  <h2 class="pd5px">Requisições pendentes dos usuários</h2><br>
 
   <ul class="list-group">
     <!-- <li class="list-group-item">
@@ -95,7 +95,8 @@
         success: function (data) {
           alert('Registros recebidos com sucesso!');
           for (var i = 0; i < data.numberDoc; i++) {
-            var date = new Date(data.tempCollection[i].date)
+            var date = new Date(data.tempCollection[i].date);
+
             $('.list-group')
             .append('<li class="list-group-item">' +
                       '<div class="bg"> '+
@@ -111,7 +112,15 @@
                           '<div class="adress" style="text-align:center">Endereço: ' + data.tempCollection[i].adress + '</div>' +
                           '<div class="author" style="text-align:center">Fonte/Autor: ' + data.tempCollection[i].author + '</div>' +
                           '<div class="author" style="text-align:center">Data: ' + Intl.DateTimeFormat('pt-BR').format(date) + '</div>' +
-                          '<div class="centralizar"><input type="submit" value="Enviar"></div><br>' +
+                                          
+                          '<form class="inline-block" id="formRegister">'+
+                            '<div class="centralizar" name="delete">'+
+                              '<input type="submit" class="deleteButton" name="deleteButton" value="Deletar">'+
+                              '<input type="submit" name="permanentButton" value="Enviar">' +
+
+                            '</div><br>'+
+                            '<input type="hidden" name="id" value="'+  data.tempCollection[i]._id +'">' +
+                          '</form>' +
                         '</div>' +
                       '</div>' + 
                     '</li><br>');
