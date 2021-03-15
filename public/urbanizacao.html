@@ -49,31 +49,31 @@
         <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 26px; padding-top: 0px">Adicionar registro</h1><br>
         <form class="mg15" id="mg15" style="display: none">
 
-            <span class="textinho verdinho" style="margin-bottom: 15px; text-align: center;">Insira as informações da maneira mais completa possível :)</span>
+            <span class="textinho verdinho" style="margin-bottom: 15px; text-align: center;">Insira as informações da maneira mais completa possível, e observe as exigências de cada item, para que seu registro seja aceito</span>
             <br>
 
             <label for="fname" style="margin-top: 15px">Categoria:</label><br>
                 <select name="type" id="type" style="margin-bottom: 15px">
-                    <option value="Social">Registro social</option>
-                    <option value="Ambiental">Registro ambiental</option>
-                    <option value="Histórico">Registro histórico</option>
+                    <option value="Ambiental">Ambiental</option>
+                    <option value="Histórico">Histórico</option>
+                    <option value="Social">Social</option>
                 </select><br>
 
             <label for="fname">Sub-categoria:</label><br>
                 <select name="sub_type" id="sub_type" style="margin-bottom: 15px">
-                    <option value="Transporte">Irregularidade no transporte publico</option>
                     <option value="Fotografia antiga">Fotografia antiga</option>
                     <option value="Irregularidade ambiental">Irregularidade ambiental</option>
-                    <option value="Equipamentos urbanos">Equipamentos urbanos</option>
+                    <option value="Irregularidade urbana">Irregularidade urbana</option>
+                    <option value="Outro tipo de irregularidade">Outro tipo de irregularidade</option>
                     <option value="Sugestão de melhoria">Sugestão de melhoria</option>
-                    <option value="Lixo mal designado">Lixo mal designado</option>
+                    <option value="Outros">Outros</option>
                 </select><br>
 
             <label for="fname">Endereço</label><br>
             <input type="text" id="adress" name="adress" size="46em" style="margin-bottom: 15px"><br>
 
             <label for="fname">Coordenadas</label><br>
-            <input type="text" id="coord" name="coord" size="46em" placeholder="XX.XXX, XX.XXX" pattern="[0-9]{2}.[0-9]{3} [0-9]{2}.[0-9]{3}" ><br>
+            <input type="text" id="coord" name="coord" size="46em" placeholder="XX.XXXXX, XX.XXXXX" pattern="[0-9]{2}.[0-9]{3} [0-9]{2}.[0-9]{3}" ><br>
             <span class="textinho verdinho" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
             <br>
 
@@ -88,7 +88,8 @@
             
             <label for="fname">Imagem</label><br>
             <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px" accept="image/*"><br>
-
+            <span class="textinho verdinho" style="margin-bottom: 30px">A foto deve ser JPEG e ter largura exata de 300px</span>
+            <br>
             <div class="centralizar"><input type="submit" value="Enviar"></div><br>
         </form>
     </div>
