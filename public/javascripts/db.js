@@ -109,6 +109,23 @@ class connectionClass {
     }
   }
 
+  async updateRegister(id) {
+    try {
+      this.client = await client.connect();
+      console.log("Connected correctly to server");
+      const db = this.client.db(dbName);
+      var idRegister = ObjectId(id);
+      var query = {_id: idRegister};
+      db.collection('registers').updateOne(query,  { $set: {isTemporary: false}}, function(err, res){
+        if(err) throw err;
+        console.log("1 document updated");
+      });
+
+      this.client.close();
+    } catch (error) {
+      console.log(error);
+    }
+  }
   async findPassword() {
     try {
       this.client = await client.connect();

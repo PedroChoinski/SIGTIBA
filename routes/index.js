@@ -85,13 +85,9 @@ router.post('/tela_admin.html', function (req, res, next) {
 
 })
 
-router.post('/upload/perm', function (req, res, next) {
-  var register = req.body;
-  var id = register['idRegister'];
-  var password = register['password']
-  db.findPassword(idRegister, password).then(function (result) {
-    res.send({ success: result });
-  });
+router.post('/registers/update', function (req, res, next) {
+  var id = req.body.id;
+  db.updateRegister(id).then(() => res.send({ success: true }));
 });
 
 router.post('/delete', function (req, res, next) {
