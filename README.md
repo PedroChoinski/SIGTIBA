@@ -47,6 +47,9 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 ### Node.js
 > Para auxiliar no desenvolvimento do back-end foi utilizado o Node.js, um interpretador de JavaScript que não depende do navegador. Para instalá-lo, acesse [Node.js](https://nodejs.org/en/) e selecione a versão LTS corresponde ao seu sistema operacional. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
+### MongoDB
+> O banco de dados usado no desenvolvimento foi o MongoDB, portanto é fundamental instalá-lo para rodar o projeto por completo. Para baixá-lo acesse [MongoDB](https://www.mongodb.com/try/download/community) e baixe a versão Community Server. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
+
 ### QGIS
 > Caso esteja interessado em trabalhar com a parte do geoprocessamento de nosso projeto, será necessário baixar o QGIS, um sistema de informações geográficas, para abrir os arquivos correspondentes ao mapa e editá-los, se for desejável. Para baixar a ferramenta acesse [QGIS download](https://qgis.org/pt_BR/site/forusers/download.html), selecione seu sistema operacional, vá até Repositório de Lançamento de Longa Duração e então baixe a versão Standalone correspondente a sua máquina. Durante o processo de instalação prossiga da maneira que já vem previamente recomendada.
 
@@ -62,7 +65,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
 ## 🎬 Como Executar o Projeto
 
   ### Iniciando o Servidor do Node.js
-  > Para iniciar o servidor do Node.js integrado ao banco de dados é necessário abrir o prompt de comando de seu sistema operacional, ir até o diretório em que se encontra o projeto, e executar o comando "npm start".
+  > Após instalar pelo menos o Node.JS e o MongoDB você estará apto para seguir os próximos passos. Para iniciar o servidor do Node.js integrado ao banco de dados é necessário abrir o prompt de comando de seu sistema operacional, ir até o diretório em que se encontra o projeto, e executar o comando "npm start". Caso ocorra algum erro significa que será necessário instalar os pacotes do item abaixo.
 
   #### Alguns Pacotes que Deverão ser Instalados
   
@@ -73,6 +76,7 @@ Caso esteja interessado em executar o projeto com o maior aproveitamento possív
   > 3. [Body-Parser](https://www.npmjs.com/package/body-parser)
   > 4. [Express](https://www.npmjs.com/package/express)
   > 5. [Multer Gridfs Storage](https://www.npmjs.com/package/multer-gridfs-storage)
+  > 6. [Cookie-Parser](https://www.npmjs.com/package/cookie-parser)
 
   ### Executando a Aplicação
   > Finalmente, para executar o projeto, após realizar todos os passos acima, você deve acessar o localhost padrão do Node.js em sua máquina (normalmente http://localhost:3000/), e então a aplicação será aberta em uma aba de seu navegador.
