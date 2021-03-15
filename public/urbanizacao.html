@@ -77,7 +77,7 @@
 
             <label for="fname">Coordenadas</label><br>
             <input type="text" id="coord" name="coord" size="46em" placeholder="-XX.XXXXX, -XX.XXXXX" pattern="-[0-9]{2}.[0-9]{5}, -[0-9]{2}.[0-9]{5}" ><br>
-            <span class="textinho verdinho" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
+	        <span class="textinho verdinho" style="margin-bottom: 30px">Insira coordenadas nesse formato, primeiro longitude e depois latitude.</span>
             <br>
 
             <label for="lname" style="margin-top: 10px">Descrição</label><br>
@@ -91,6 +91,7 @@
             
             <label for="fname">Imagem</label><br>
             <input type="file" id="file" name="image" size="46em" style="margin-bottom: 15px" accept="image/*"><br>
+            <span class="textinho verdinho" style="margin-bottom: 30px">A foto precisa ter largura exata de 300px.</span>
 
             <div class="centralizar"><input type="submit" value="Enviar" onclick="verify()"></div><br>
         </form>
@@ -308,15 +309,10 @@
                                                     '<img src="images/photos/'+ data.fileName[i] + '" alt="foto '+i+'">'+
                                                     '</a>'+
                                                     '<div class="title">'+ Intl.DateTimeFormat('pt-BR').format(date) +'</div>'+
-<<<<<<< Updated upstream
-                                                    '<div class="desc">'+ data.historicalCollection[i].description +'</div>'+
-                                                    '<div class="coord">Coordenadas: ' + data.historicalCollection[i].coord + '</div>' +
-                                                    '<div class="adress">Endereço: ' + data.historicalCollection[i].adress + '</div>' +
-                                                    '<div class="author">Fonte: ' + data.historicalCollection[i].author + '</div>' +
-=======
-                                                    '<div class="desc" style="text-align: center; padding: 5px;>'+ data.historicalCollection[i].description +'</div>'+
-                                                    '<div class="coord">Coordenadas: ' + data.historicalCollection[i].coord + '</div>' +
-                                                    '<div class="adress">Endereço: ' + data.historicalCollection[i].adress + '</div>' +
+                                                    '<div class="desc"><b>'+ data.historicalCollection[i].description +'</b></div>'+
+                                                    '<div class="coord"><b>Coordenadas: </b>' + data.historicalCollection[i].coord + '</div>' +
+                                                    '<div class="adress"><b>Endereço: </b>' + data.historicalCollection[i].adress + '</div>' +
+                                                    '<div class="author"><b>Fonte: </b>' + data.historicalCollection[i].author + '</div>' +
                                                     '<div class="author" style="text-align: center; padding: 5px;>Fonte: ' + data.historicalCollection[i].author + '</div>' +
                                                 '</div>'
                         );
