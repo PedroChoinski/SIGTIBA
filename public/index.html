@@ -67,7 +67,32 @@
     </div>
     </nav>
 
-    <button class="btnData1" onclick="openForm()" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#202020'">Adicionar registro</button>
+    <button class="btnData1" onclick="openForm1()" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#202020'" style="left: 0;border-radius: 0px 8px 8px 0px;">Créditos</button>
+
+    <div class="box4" id="box4" style="display: none">
+        
+        <form class="mg15_2" id="mg15_2" style="display: none">
+            <button style="background-color: rgba(46,139,87, 0.95); border: none; color: whitesmoke; width: 30px; border-radius: 0px 0px 12px 12px; float: right;padding-top: 10px" onclick="closeForm()">X</button><br>
+
+            <h2 class="under pd5px" style="padding: 5px; margin: 0px; font-size: 30px; margin-bottom: 5px">Créditos</h2>
+
+            Orientandos:<br>
+            Andre Luiz Fumaneri Junior<br>
+            Matheus Telles Batista<br>
+            Pedro Henrique Choinski<br><br>
+
+            Professor orientador:<br>
+            Ricardo Michael Pinheiro Silveira<br><br>
+            
+           <img src="images/photos/logo_if.png" alt="foto 1" width="90px">
+            Instituto Federal do Paraná - Campus Curitiba<br><br>
+
+        </form>
+    </div>
+
+
+
+    <button class="btnData1" onclick="openForm()" onMouseOver="this.style.color='white'" onMouseOut="this.style.color='#202020'" style="right: 0;">Adicionar registro</button>
 
     <div class="box3" id="box3" style="display: none">
         
@@ -181,6 +206,17 @@
             function openForm() {
             document.getElementById("box3").style.display = 'block';
             document.getElementById("mg15").style.display = 'block';
+            var ele = document.getElementsByName("registro");
+            for (var i = 0; i < ele.length; i++)
+                ele[i].checked = false;
+        }
+    
+    </script>
+
+    <script>
+            function openForm1() {
+            document.getElementById("box4").style.display = 'block';
+            document.getElementById("mg15_2").style.display = 'block';
             var ele = document.getElementsByName("registro");
             for (var i = 0; i < ele.length; i++)
                 ele[i].checked = false;
