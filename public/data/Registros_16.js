@@ -83,7 +83,7 @@ var json_Registros_16 = {
         Comment: null,
         Path:
           "C:/Users/User/Documents/GitHub/SIGTIBA/photos\\ponto_interbairros_3.jpg",
-        RelPath: "./images/photos/1615834180652.jpg",
+        RelPath: "./images/photos/couto_pereira_1958.jpg",
         Timestamp: null,
         fonte: "Coritiba Football Club",
         endereco: "R. Ubaldino do Amaral, 63 - Alto da Glória, Curitiba - PR, 80060-195",
@@ -115,7 +115,7 @@ var json_Registros_16 = {
         Comment: null,
         Path:
           "C:/Users/User/Documents/GitHub/SIGTIBA/photos\\ponto_interbairros_3.jpg",
-        RelPath: "./images/photos/1615822973555.jpg",
+        RelPath: "./images/photos/ufpr.jpg",
         Timestamp: null,
         fonte: "ufpr.br",
         endereco: "Praça Santos Andrade, 50",
@@ -147,7 +147,7 @@ var json_Registros_16 = {
         Comment: null,
         Path:
           "C:/Users/User/Documents/GitHub/SIGTIBA/photos\\ponto_interbairros_3.jpg",
-        RelPath: "./images/photos/1615833640714.jpg",
+        RelPath: "./images/photos/lixo_rua.jpg",
         Timestamp: null,
         fonte: "Pedro Choinski",
         endereco: "Rua Waldemar Loureiro Campos 5106",
@@ -179,7 +179,7 @@ var json_Registros_16 = {
         Comment: null,
         Path:
           "C:/Users/User/Documents/GitHub/SIGTIBA/photos\\ponto_interbairros_3.jpg",
-        RelPath: "./images/photos/1615682774025.jpg",
+        RelPath: "./images/photos/mate_real.jpg",
         Timestamp: null,
         fonte: "Matheus Telles Batista",
         endereco: "Rua João Negrão, 1285",
