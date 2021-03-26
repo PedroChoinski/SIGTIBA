@@ -15,6 +15,7 @@
 
   <link rel="icon" type="images/ico" href="images/icons/favicon.ico">
 
+
   <title>SIGTIBA</title>
 </head>
 
@@ -156,6 +157,9 @@
       <div class="centralizar"><input type="submit" id="submit" style="background-color: #ff5148" value="Confirmar Exclusão"></div><br><br>
     </form>
   </div>
+  <script type="text/javascript" src="data/Registros_16.js"></script> 
+  <script type="text/javascript" src="javascripts/db.js"></script> 
+  <script src="javascripts/leaflet.js"></script>  
   <script>    
     function openFormDelete(id){
       if ($('#idRegisterDelete').length === 0) $('#deleteForm').append('<input type="text" id="idRegisterDelete" value="'+ id +'">');
@@ -205,7 +209,10 @@
               type: 'POST',
               dataType: 'JSON',
               data: data,
-              success:function (){
+              success:function (dataResponse){
+                new L.geoJson(json_Registros_16, {
+                  addData: (dataResponse.newRegister)
+                });
                 alert('Registro confirmado com sucesso!');
                 closeForm('setPerm');
                 while (cardRegister.hasChildNodes()) {

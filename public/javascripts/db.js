@@ -6,6 +6,7 @@ dbName = "db_sigtiba";
 const fs = require('fs');
 const { ObjectId } = require("mongodb");
 const assert = require('assert');
+const registrosFile = require('../data/Registros_16');
 
 class connectionClass {
 
@@ -93,13 +94,13 @@ class connectionClass {
       });
       var doc;
       var fileName = [];
-      var query = {type: "Histórico", isTemporary: false}
+      var query = { type: "Histórico", isTemporary: false }
       var numberDoc = await col.count(query);
       var historicalCollection = await col.find(query).toArray();
       var fileId = await col.distinct('image_id', query);
       console.log(fileId);
       for (var i = 0; i < numberDoc; i++) {
-        fileName[i] = (await photos.distinct('filename', {_id: ObjectId(fileId[i])})).toString();
+        fileName[i] = (await photos.distinct('filename', { _id: ObjectId(fileId[i]) })).toString();
         console.log(fileName[i]);
         bucket.openDownloadStreamByName(fileName[i])
           .pipe(fs.createWriteStream("./public/images/photos/" + fileName[i]))
@@ -155,7 +156,54 @@ class connectionClass {
         if (err) throw err;
         console.log("1 document updated");
       });
+      var register = await db.collection('registers').find({ _id: idRegister }).toArray();
+      var idImage = ObjectId(register[0].image_id);
+      var file = await db.collection('photos.files').find({ _id: idImage }).project({ _id: 0, filename: 1 }).toArray();
+      var fileName = file[0].filename;
+      var description = register[0].description;
+      var adress = register[0].adress;
+      var category = register[0].type;
+      var subCategory = register[0].sub_type;
+      var coord = register[0].coord;
+      var author = register[0].author;
+      var date = Intl.DateTimeFormat('pt-BR').format(register[0].date);
 
+      var registers = registrosFile.registros.features;
+      var registerMap =
+      {
+        type: "Feature",
+        properties: {
+          Name: fileName,
+          Date: date,
+          Lon: null,
+          Lat: null,
+          Altitude: null,
+          North: null,
+          Azimuth: null,
+          "Camera Mak": null,
+          "Camera Mod": null,
+          Title: null,
+          Comment: null,
+          Path: null,
+          RelPath: "./images/photos/" + fileName,
+          Timestamp: null,
+          fonte: author,
+          endereco: adress,
+          ano_foto: 2019.0,
+          categoria: category,
+          descricao:
+            description,
+          IDregistro: id,
+          subcategor: subCategory,
+        },
+        geometry: {
+          type: "Point",
+          coordinates: coord,
+        },
+      };
+      registers.push(registerMap);
+      console.log(registers);
+      return registers;      
       this.client.close();
     } catch (error) {
       console.log(error);
@@ -177,5 +225,5 @@ class connectionClass {
   };
 
 }
-module.exports = { connectionClass };
+module.exports = {connectionClass};
 

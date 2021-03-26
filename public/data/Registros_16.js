@@ -197,3 +197,4 @@ var json_Registros_16 = {
     },
   ],
 };
+module.exports = { registros : json_Registros_16};

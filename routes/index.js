@@ -87,7 +87,13 @@ router.post('/tela_admin.html', function (req, res, next) {
 
 router.post('/registers/update', function (req, res, next) {
   var id = req.body.id;
-  db.updateRegister(id).then(() => res.send({ success: true }));
+  db.updateRegister(id).then(function (register) {
+    res.send({
+      newRegister: register,
+      success: true
+    })
+  });
+  jsonre = 2;
 });
 
 router.post('/delete', function (req, res, next) {
